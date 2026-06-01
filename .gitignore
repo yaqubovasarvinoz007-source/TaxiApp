@@ -1,0 +1,27 @@
+## Artifacts
+bin/
+obj/
+*.dll
+*.pdb
+
+## VS Code
+.vscode/
+*.code-workspace
+
+## IDE
+.idea/
+*.swp
+*.swo
+
+## OS
+.DS_Store
+Thumbs.db
+
+## Project specific
+*.db
+*.db-shm
+*.db-wal
+*.pub
+
+## User files
+*.user
