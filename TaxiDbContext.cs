@@ -10,6 +10,9 @@ namespace TaxiApp
         public DbSet<Haydovchi> Haydovchilar { get; set; } = null!;
         public DbSet<Mijoz> Mijozlar { get; set; } = null!;
         public DbSet<Buyurtma> Buyurtmalar { get; set; } = null!;
+        public DbSet<HaydovchiDaromadi> HaydovchiDaromadilar { get; set; } = null!;
+        public DbSet<MijozSharhı> MijozSharhlari { get; set; } = null!;
+        public DbSet<PulYechish> PulYechishlari { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -17,7 +20,7 @@ namespace TaxiApp
                 Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
                 "TaxiApp");
 
-            Directory.CreateDirectory(appDataPath); // mavjud bo'lsa xato bermaydi
+            Directory.CreateDirectory(appDataPath);
 
             string dbPath = Path.Combine(appDataPath, "taxi.db");
             optionsBuilder.UseSqlite($"Data Source={dbPath}");
@@ -40,6 +43,34 @@ namespace TaxiApp
                 .WithMany(h => h.Buyurtmalar)
                 .HasForeignKey(b => b.HaydovchiId)
                 .OnDelete(DeleteBehavior.Restrict);
+
+            // HaydovchiDaromadi <-> Haydovchi
+            modelBuilder.Entity<HaydovchiDaromadi>()
+                .HasOne(hd => hd.Haydovchi)
+                .WithMany()
+                .HasForeignKey(hd => hd.HaydovchiId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            // MijozSharhı <-> Haydovchi
+            modelBuilder.Entity<MijozSharhı>()
+                .HasOne(ms => ms.Haydovchi)
+                .WithMany()
+                .HasForeignKey(ms => ms.HaydovchiId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            // MijozSharhı <-> Mijoz
+            modelBuilder.Entity<MijozSharhı>()
+                .HasOne(ms => ms.Mijoz)
+                .WithMany()
+                .HasForeignKey(ms => ms.MijozId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            // PulYechish <-> Haydovchi
+            modelBuilder.Entity<PulYechish>()
+                .HasOne(py => py.Haydovchi)
+                .WithMany()
+                .HasForeignKey(py => py.HaydovchiId)
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }
