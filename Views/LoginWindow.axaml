@@ -1,0 +1,115 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="TaxiApp.Views.LoginWindow"
+        Title="TaxiPro — Kirish"
+        Width="500"
+        Height="650"
+        WindowStartupLocation="CenterScreen"
+        CanResize="False"
+        Background="#0F172A">
+    
+
+
+<Grid>
+
+    <Border Background="#1E293B"
+            CornerRadius="20"
+            Margin="32"
+            Padding="32">
+
+        <StackPanel Spacing="16"
+                    VerticalAlignment="Center">
+
+            <!-- LOGO -->
+
+            <StackPanel HorizontalAlignment="Center"
+                        Spacing="4"
+                        Margin="0,0,0,10">
+
+                <TextBlock Text="🚕"
+                           FontSize="48"
+                           HorizontalAlignment="Center"/>
+
+                <TextBlock Text="TaxiPro"
+                           FontSize="30"
+                           FontWeight="Bold"
+                           Foreground="White"
+                           HorizontalAlignment="Center"/>
+
+                <TextBlock Text="Boshqaruv tizimiga xush kelibsiz"
+                           FontSize="14"
+                           Foreground="#94A3B8"
+                           HorizontalAlignment="Center"/>
+
+            </StackPanel>
+
+            <!-- XABAR -->
+
+            <TextBlock Name="lblXabar"
+                       FontSize="13"
+                       HorizontalAlignment="Center"
+                       IsVisible="False"/>
+
+            <!-- LOGIN -->
+
+            <TextBlock Text="Foydalanuvchi nomi"
+                       FontSize="14"
+                       FontWeight="SemiBold"
+                       Foreground="#CBD5E1"/>
+
+            <TextBox Name="txtLogin"
+                     Watermark="Loginni kiriting"
+                     Height="44"
+                     FontSize="15"
+                     CornerRadius="10"/>
+
+            <!-- PAROL -->
+
+            <TextBlock Text="Parol"
+                       FontSize="14"
+                       FontWeight="SemiBold"
+                       Foreground="#CBD5E1"
+                       Margin="0,8,0,0"/>
+
+            <TextBox Name="txtParol"
+                     Watermark="Parolni kiriting"
+                     PasswordChar="•"
+                     Height="44"
+                     FontSize="15"
+                     CornerRadius="10"/>
+
+            <!-- KIRISH TUGMASI -->
+
+            <Button Name="btnKirish"
+                    Height="50"
+                    Background="#2563EB"
+                    Foreground="White"
+                    CornerRadius="10"
+                    HorizontalAlignment="Stretch"
+                    Margin="0,12,0,0">
+
+                <TextBlock Text="Tizimga Kirish"
+                           FontSize="16"
+                           FontWeight="SemiBold"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           TextAlignment="Center"/>
+
+            </Button>
+
+            <!-- CHIZIQ -->
+
+            <Border Height="1"
+                    Background="#334155"
+                    Margin="0,12,0,4"/>
+
+            <TextBlock Text="yaksar"
+                       FontSize="12"
+                       Foreground="#64748B"
+                       HorizontalAlignment="Center"/>
+
+        </StackPanel>
+
+    </Border>
+</Grid>
+</Window>

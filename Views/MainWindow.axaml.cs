@@ -1,0 +1,496 @@
+using TaxiApp;
+using Avalonia;
+using Avalonia.Controls;
+using Avalonia.Layout;
+using Avalonia.Media;
+using Avalonia.VisualTree;
+using System;
+using System.Collections.ObjectModel;
+using System.Linq;
+using TaxiApp.Models;
+
+namespace TaxiApp.Views
+{
+    public partial class MainWindow : Window
+    {
+        private readonly TaxiServis _servis = new TaxiServis();
+        private readonly ObservableCollection<Haydovchi> _haydovchilar = new();
+        private readonly ObservableCollection<Mijoz> _mijozlar = new();
+        private readonly ObservableCollection<BuyurtmaView> _buyurtmalar = new();
+        private Grid panelStatistika = null!;
+        private Grid panelHaydovchilar = null!;
+        private Grid panelMijozlar = null!;
+        private Grid panelBuyurtmalar = null!;
+        private TextBox txtHIsm = null!;
+        private TextBox txtHPlate = null!;
+        private Button btnHSaqlash = null!;
+        private DataGrid dgHaydovchilar = null!;
+        private Haydovchi? _tanlanganH;
+        private TextBox txtMIsm = null!;
+        private TextBox txtMTel = null!;
+        private Button btnMSaqlash = null!;
+        private DataGrid dgMijozlar = null!;
+        private Mijoz? _tanlanganM;
+        private ComboBox cbMijoz = null!;
+        private ComboBox cbHaydovchi = null!;
+        private TextBox txtQayerdan = null!;
+        private TextBox txtQayerga = null!;
+        private TextBox txtNarx = null!;
+        private DataGrid dgBuyurtmalar = null!;
+        private TextBlock lblTushum = null!;
+        private TextBlock lblJamiTushum = null!;
+        private TextBlock lblFaolH = null!;
+        private TextBlock lblFaolM = null!;
+        private TextBlock lblJamiH = null!;
+        private TextBlock lblBoshH = null!;
+        private TextBlock lblJamiM = null!;
+        private TextBlock lblJamiB = null!;
+        private TextBlock lblXabar = null!;
+        private bool isDarkMode = false;
+
+        public MainWindow()
+        {
+            Title = "TaxiPro — Boshqaruv Tizimi";
+            Width = 1150; Height = 700;
+            MinWidth = 900; MinHeight = 600;
+            WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            Background = Brush.Parse("#F1F5F9");
+            InterfeysBuild();
+            YangilaHamma();
+        }
+
+        private void ToggleDarkMode(Grid root) {
+            isDarkMode = !isDarkMode;
+            var bgColor = isDarkMode ? "#0F172A" : "#F1F5F9";
+            Background = Brush.Parse(bgColor);
+            var kardBg = isDarkMode ? "#1E293B" : "#FFFFFF";
+            foreach (var ch in panelStatistika.GetVisualDescendants().OfType<Border>()) { ch.Background = Brush.Parse(kardBg); }
+            ApplyPanelTheme(panelStatistika);
+            ApplyPanelTheme(panelHaydovchilar);
+            ApplyPanelTheme(panelMijozlar);
+            ApplyPanelTheme(panelBuyurtmalar);
+        }
+
+        private void ApplyPanelTheme(Grid panel) {
+            var bgColor = isDarkMode ? "#1E293B" : "#FFFFFF";
+            var textColor = isDarkMode ? "#E2E8F0" : "#1E293B";
+            var borderColor = isDarkMode ? "#334155" : "#E2E8F0";
+            panel.Background = Brush.Parse(bgColor);
+            ApplyThemeRecursive(panel, textColor, bgColor, borderColor);
+        }
+
+        private void ApplyThemeRecursive(Control control, string textColor, string bgColor, string borderColor) {
+            if (control is TextBlock tb) {
+                tb.Foreground = Brush.Parse(textColor);
+            } else if (control is Border b) {
+                b.Background = Brush.Parse(bgColor);
+                b.BorderBrush = Brush.Parse(borderColor);
+            } else if (control is Button btn) {
+                btn.Foreground = Brush.Parse(textColor);
+            } else if (control is TextBox txb) {
+                txb.Foreground = Brush.Parse(textColor);
+                txb.Background = Brush.Parse(bgColor);
+            } else if (control is ComboBox cb) {
+                cb.Foreground = Brush.Parse(textColor);
+                cb.Background = Brush.Parse(bgColor);
+            } else if (control is DataGrid dg) {
+                dg.Foreground = Brush.Parse(textColor);
+                dg.Background = Brush.Parse(bgColor);
+            }
+            if (control is Panel p) {
+                foreach (var child in p.Children)
+                    if (child is Control ctrl)
+                        ApplyThemeRecursive(ctrl, textColor, bgColor, borderColor);
+            }
+        }
+
+        private void InterfeysBuild()
+        {
+            var root = new Grid();
+            root.ColumnDefinitions.Add(new ColumnDefinition(GridLength.Parse("240")));
+            root.ColumnDefinitions.Add(new ColumnDefinition(GridLength.Star));
+            var sidebar = new DockPanel { Background = Brush.Parse("#1E293B"), LastChildFill = true };
+            var logo = new StackPanel { Margin = new Thickness(0,28,0,24), HorizontalAlignment = HorizontalAlignment.Center };
+            logo.Children.Add(new TextBlock { Text = "🚕", FontSize = 36, HorizontalAlignment = HorizontalAlignment.Center });
+            logo.Children.Add(new TextBlock { Text = "TaxiPro", Foreground = Brushes.White, FontSize = 18, FontWeight = FontWeight.Bold, HorizontalAlignment = HorizontalAlignment.Center });
+            logo.Children.Add(new TextBlock { Text = "Boshqaruv Tizimi", Foreground = Brush.Parse("#64748B"), FontSize = 12, HorizontalAlignment = HorizontalAlignment.Center });
+            DockPanel.SetDock(logo, Dock.Top);
+            sidebar.Children.Add(logo);
+            var copy = new TextBlock { Text = "© yaksar", Foreground = Brush.Parse("#334155"), FontSize = 11, HorizontalAlignment = HorizontalAlignment.Center, Margin = new Thickness(0,0,0,12) };
+            DockPanel.SetDock(copy, Dock.Bottom);
+            sidebar.Children.Add(copy);
+            var nav = new StackPanel { Spacing = 4, Margin = new Thickness(8,0) };
+            nav.Children.Add(NavBtn("📊  Ma'lumotlar",  () => PanelKo_rsat(panelStatistika)));
+            nav.Children.Add(NavBtn("🚗  Haydovchilar", () => PanelKo_rsat(panelHaydovchilar)));
+            nav.Children.Add(NavBtn("👥  Mijozlar",     () => PanelKo_rsat(panelMijozlar)));
+            nav.Children.Add(NavBtn("📋  Buyurtmalar",  () => PanelKo_rsat(panelBuyurtmalar)));
+            nav.Children.Add(new Border { Height = 20 });
+            var btnTheme = new Button {
+                Content = "🌙 Tungi Rejim",
+                HorizontalAlignment = HorizontalAlignment.Stretch,
+                HorizontalContentAlignment = HorizontalAlignment.Left,
+                Padding = new Thickness(14,11), Background = Brushes.Transparent,
+                Foreground = Brush.Parse("#94A3B8"), FontSize = 14, CornerRadius = new CornerRadius(8)
+            };
+            btnTheme.Click += (_, _) => ToggleDarkMode(root);
+            nav.Children.Add(btnTheme);
+            sidebar.Children.Add(nav);
+            Grid.SetColumn(sidebar, 0);
+            root.Children.Add(sidebar);
+            var main = new Grid();
+            main.RowDefinitions.Add(new RowDefinition(GridLength.Auto));
+            main.RowDefinitions.Add(new RowDefinition(GridLength.Star));
+            lblXabar = new TextBlock { Height = 0, Padding = new Thickness(16,0), VerticalAlignment = VerticalAlignment.Center, FontSize = 13 };
+            Grid.SetRow(lblXabar, 0); main.Children.Add(lblXabar);
+            var content = new Grid { Margin = new Thickness(20) };
+            panelStatistika   = StatPanel();
+            panelHaydovchilar = HPanel();
+            panelMijozlar     = MPanel();
+            panelBuyurtmalar  = BPanel();
+            content.Children.Add(panelStatistika);
+            content.Children.Add(panelHaydovchilar);
+            content.Children.Add(panelMijozlar);
+            content.Children.Add(panelBuyurtmalar);
+            Grid.SetRow(content, 1); main.Children.Add(content);
+            Grid.SetColumn(main, 1); root.Children.Add(main);
+            Content = root;
+        }
+
+        private Grid StatPanel()
+        {
+            var p = new Grid { IsVisible = true };
+            p.RowDefinitions.Add(new RowDefinition(GridLength.Auto));
+            p.RowDefinitions.Add(new RowDefinition(GridLength.Auto));
+            var s = Sarlavha("📊  Biznes Tahlili va Statistika");
+            Grid.SetRow(s, 0); p.Children.Add(s);
+            var wrap = new WrapPanel { Orientation = Orientation.Horizontal, Margin = new Thickness(0,0,0,20) };
+            wrap.Children.Add(StatKarta("💰 Kunlik Tushum",      "#10B981", out lblTushum));
+            wrap.Children.Add(StatKarta("💵 Jami Daromad",       "#3B82F6", out lblJamiTushum));
+            wrap.Children.Add(StatKarta("🏆 Eng Faol Haydovchi", "#F59E0B", out lblFaolH));
+            wrap.Children.Add(StatKarta("⭐ Eng Faol Mijoz",      "#8B5CF6", out lblFaolM));
+            wrap.Children.Add(StatKarta("🚗 Jami Haydovchilar",  "#EC4899", out lblJamiH));
+            wrap.Children.Add(StatKarta("🟢 Bosh Haydovchilar",  "#06B6D4", out lblBoshH));
+            wrap.Children.Add(StatKarta("👥 Jami Mijozlar",      "#F97316", out lblJamiM));
+            wrap.Children.Add(StatKarta("📋 Jami Buyurtmalar",   "#6366F1", out lblJamiB));
+            Grid.SetRow(wrap, 1); p.Children.Add(wrap);
+            return p;
+        }
+
+        private Grid HPanel()
+        {
+            var p = new Grid { IsVisible = false };
+            p.RowDefinitions.Add(new RowDefinition(GridLength.Auto));
+            p.RowDefinitions.Add(new RowDefinition(GridLength.Auto));
+            p.RowDefinitions.Add(new RowDefinition(GridLength.Star));
+            p.Children.Add(Sarlavha("🚗  Haydovchilarni Boshqarish"));
+            var tb = new StackPanel { Orientation = Orientation.Horizontal, Spacing = 10, Margin = new Thickness(0,0,0,12) };
+            txtHIsm   = new TextBox { Watermark = "👤 Ismi va familiyasi", Width = 220 };
+            txtHPlate = new TextBox { Watermark = "🚘 Mashina raqami", Width = 170 };
+            btnHSaqlash = Btn("➕ Qoshish", "#16A34A");
+            btnHSaqlash.Click += BtnH_Saqlash;
+            var btnBekor = Btn("✖ Bekor", "#475569");
+            btnBekor.Click += (_, _) => HFormTozala();
+            var txtQ = new TextBox { Watermark = "🔍 Qidiruv...", Width = 200 };
+            txtQ.TextChanged += (_, _) => {
+                var q = txtQ.Text?.ToLower() ?? "";
+                dgHaydovchilar.ItemsSource = _haydovchilar.Where(h => h.Ismi.ToLower().Contains(q) || h.MashinaRaqami.ToLower().Contains(q)).ToList();
+            };
+            var btnOchir = Btn("🗑 Ochirish", "#DC2626");
+            btnOchir.Click += (_, _) => {
+                if (_tanlanganH == null) { Xabar("Avval haydovchini tanlang!", false); return; }
+                try { _servis.HaydovchiOchirish(_tanlanganH.Id); HFormTozala(); YangilaHamma(); Xabar("Haydovchi ochirildi.", true); }
+                catch (Exception ex) { Xabar(ex.Message, false); }
+            };
+            var btnBosh = Btn("🔄 Bosh qilish", "#0EA5E9");
+            btnBosh.Click += (_, _) => {
+                if (_tanlanganH == null) { Xabar("Avval haydovchini tanlang!", false); return; }
+                _servis.HaydovchiHolatiYangilash(_tanlanganH.Id, "Bosh");
+                YangilaHamma(); Xabar("Holat yangilandi.", true);
+            };
+            tb.Children.Add(txtHIsm); tb.Children.Add(txtHPlate);
+            tb.Children.Add(btnHSaqlash); tb.Children.Add(btnBekor);
+            tb.Children.Add(new Border { Width = 20 }); tb.Children.Add(txtQ);
+            tb.Children.Add(btnOchir); tb.Children.Add(btnBosh);
+            Grid.SetRow(tb, 1); p.Children.Add(tb);
+            dgHaydovchilar = Jadval();
+            dgHaydovchilar.ItemsSource = _haydovchilar;
+            dgHaydovchilar.Columns.Add(Ustun("N",              "Id",             55));
+            dgHaydovchilar.Columns.Add(Ustun("Haydovchi Ismi", "Ismi",          280));
+            dgHaydovchilar.Columns.Add(Ustun("Mashina Raqami", "MashinaRaqami", 160));
+            dgHaydovchilar.Columns.Add(Ustun("Holati",         "Holati",        120));
+            dgHaydovchilar.SelectionChanged += (_, _) => {
+                if (dgHaydovchilar.SelectedItem is Haydovchi h) {
+                    _tanlanganH = h; txtHIsm.Text = h.Ismi; txtHPlate.Text = h.MashinaRaqami;
+                    btnHSaqlash.Content = "✏️ Yangilash"; btnHSaqlash.Background = Brush.Parse("#EA580C");
+                }
+            };
+            Grid.SetRow(dgHaydovchilar, 2); p.Children.Add(dgHaydovchilar);
+            return p;
+        }
+
+        private Grid MPanel()
+        {
+            var p = new Grid { IsVisible = false };
+            p.RowDefinitions.Add(new RowDefinition(GridLength.Auto));
+            p.RowDefinitions.Add(new RowDefinition(GridLength.Auto));
+            p.RowDefinitions.Add(new RowDefinition(GridLength.Star));
+            p.Children.Add(Sarlavha("👥  Mijozlar Malumotlar Bazasi"));
+            var tb = new StackPanel { Orientation = Orientation.Horizontal, Spacing = 10, Margin = new Thickness(0,0,0,12) };
+            txtMIsm = new TextBox { Watermark = "👤 Mijoz ismi", Width = 220 };
+            txtMTel = new TextBox { Watermark = "📱 Telefon raqami", Width = 180 };
+            btnMSaqlash = Btn("➕ Qoshish", "#16A34A");
+            btnMSaqlash.Click += BtnM_Saqlash;
+            var btnBekor = Btn("✖ Bekor", "#475569");
+            btnBekor.Click += (_, _) => MFormTozala();
+            var txtQ = new TextBox { Watermark = "🔍 Qidiruv...", Width = 200 };
+            txtQ.TextChanged += (_, _) => {
+                var q = txtQ.Text?.ToLower() ?? "";
+                dgMijozlar.ItemsSource = _mijozlar.Where(m => m.Ismi.ToLower().Contains(q) || m.Telefon.Contains(q)).ToList();
+            };
+            var btnOchir = Btn("🗑 Ochirish", "#DC2626");
+            btnOchir.Click += (_, _) => {
+                if (_tanlanganM == null) { Xabar("Avval mijozni tanlang!", false); return; }
+                try { _servis.MijozOchirish(_tanlanganM.Id); MFormTozala(); YangilaHamma(); Xabar("Mijoz ochirildi.", true); }
+                catch (Exception ex) { Xabar(ex.Message, false); }
+            };
+            tb.Children.Add(txtMIsm); tb.Children.Add(txtMTel);
+            tb.Children.Add(btnMSaqlash); tb.Children.Add(btnBekor);
+            tb.Children.Add(new Border { Width = 20 }); tb.Children.Add(txtQ);
+            tb.Children.Add(btnOchir);
+            Grid.SetRow(tb, 1); p.Children.Add(tb);
+            dgMijozlar = Jadval();
+            dgMijozlar.ItemsSource = _mijozlar;
+            dgMijozlar.Columns.Add(Ustun("N",          "Id",      55));
+            dgMijozlar.Columns.Add(Ustun("Mijoz Ismi", "Ismi",   280));
+            dgMijozlar.Columns.Add(Ustun("Telefon",    "Telefon", 200));
+            dgMijozlar.SelectionChanged += (_, _) => {
+                if (dgMijozlar.SelectedItem is Mijoz m) {
+                    _tanlanganM = m; txtMIsm.Text = m.Ismi; txtMTel.Text = m.Telefon;
+                    btnMSaqlash.Content = "✏️ Yangilash"; btnMSaqlash.Background = Brush.Parse("#EA580C");
+                }
+            };
+            Grid.SetRow(dgMijozlar, 2); p.Children.Add(dgMijozlar);
+            return p;
+        }
+
+        private Grid BPanel()
+        {
+            var p = new Grid { IsVisible = false };
+            p.ColumnDefinitions.Add(new ColumnDefinition(GridLength.Parse("330")));
+            p.ColumnDefinitions.Add(new ColumnDefinition(GridLength.Star));
+            var forma = new Border {
+                Background = Brushes.White, CornerRadius = new CornerRadius(12),
+                Padding = new Thickness(20), Margin = new Thickness(0,0,16,0),
+                BorderBrush = Brush.Parse("#E2E8F0"), BorderThickness = new Thickness(1)
+            };
+            var fi = new StackPanel { Spacing = 12 };
+            fi.Children.Add(new TextBlock { Text = "📋 Yangi Buyurtma", FontSize = 16, FontWeight = FontWeight.SemiBold, Margin = new Thickness(0,0,0,4) });
+            cbMijoz     = new ComboBox { PlaceholderText = "👤 Mijozni tanlang...", HorizontalAlignment = HorizontalAlignment.Stretch };
+            cbHaydovchi = new ComboBox { PlaceholderText = "🚗 Bosh haydovchi...", HorizontalAlignment = HorizontalAlignment.Stretch };
+            txtQayerdan = new TextBox  { Watermark = "📍 Qayerdan?",               HorizontalAlignment = HorizontalAlignment.Stretch };
+            txtQayerga  = new TextBox  { Watermark = "🏁 Qayerga?",                HorizontalAlignment = HorizontalAlignment.Stretch };
+            txtNarx     = new TextBox  { Watermark = "💰 Narxi (som)",             HorizontalAlignment = HorizontalAlignment.Stretch };
+            var btnTasdiq = new Button {
+                Content = "🚕 Buyurtmani Tasdiqlash", Background = Brush.Parse("#2563EB"), Foreground = Brushes.White,
+                HorizontalAlignment = HorizontalAlignment.Stretch, HorizontalContentAlignment = HorizontalAlignment.Center,
+                Padding = new Thickness(0,12), FontWeight = FontWeight.SemiBold, FontSize = 14, CornerRadius = new CornerRadius(8)
+            };
+            btnTasdiq.Click += BtnBuyurtma_Tasdiq;
+            fi.Children.Add(cbMijoz); fi.Children.Add(cbHaydovchi);
+            fi.Children.Add(txtQayerdan); fi.Children.Add(txtQayerga);
+            fi.Children.Add(txtNarx); fi.Children.Add(btnTasdiq);
+            forma.Child = fi;
+            Grid.SetColumn(forma, 0); p.Children.Add(forma);
+            var right = new Grid();
+            right.RowDefinitions.Add(new RowDefinition(GridLength.Auto));
+            right.RowDefinitions.Add(new RowDefinition(GridLength.Star));
+            var btnBuyOchir = Btn("🗑 Ochirish", "#DC2626");
+            btnBuyOchir.Click += (_, _) => {
+                if (dgBuyurtmalar.SelectedItem is BuyurtmaView bv) {
+                    _servis.BuyurtmaOchirish(bv.Id); YangilaHamma(); Xabar("Buyurtma ochirildi.", true);
+                } else { Xabar("Avval buyurtmani tanlang!", false); }
+            };
+            var topBar = new StackPanel { Orientation = Orientation.Horizontal, Margin = new Thickness(0,0,0,10) };
+            topBar.Children.Add(Sarlavha("📋  Buyurtmalar Royxati"));
+            topBar.Children.Add(new Border { Width = 20 });
+            topBar.Children.Add(btnBuyOchir);
+            Grid.SetRow(topBar, 0); right.Children.Add(topBar);
+            dgBuyurtmalar = Jadval();
+            dgBuyurtmalar.ItemsSource = _buyurtmalar;
+            dgBuyurtmalar.Columns.Add(Ustun("N",         "Id",            60));
+            dgBuyurtmalar.Columns.Add(Ustun("Mijoz",     "MijozIsmi",    150));
+            dgBuyurtmalar.Columns.Add(Ustun("Haydovchi", "HaydovchiIsmi",150));
+            dgBuyurtmalar.Columns.Add(Ustun("Yonalish",  "Yonalish",     200));
+            dgBuyurtmalar.Columns.Add(Ustun("Narx",      "NarxMatn",     110));
+            dgBuyurtmalar.Columns.Add(Ustun("Sana",      "SanaMatn",     140));
+            Grid.SetRow(dgBuyurtmalar, 1); right.Children.Add(dgBuyurtmalar);
+            Grid.SetColumn(right, 1); p.Children.Add(right);
+            return p;
+        }
+
+        private void BtnH_Saqlash(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtHIsm.Text) || string.IsNullOrWhiteSpace(txtHPlate.Text))
+            { Xabar("Ism va mashina raqamini kiriting!", false); return; }
+            try {
+                if (_tanlanganH != null) { _servis.HaydovchiYangilash(_tanlanganH.Id, txtHIsm.Text, txtHPlate.Text); Xabar("Haydovchi yangilandi.", true); }
+                else { _servis.HaydovchiQoshish(txtHIsm.Text, txtHPlate.Text); Xabar("Yangi haydovchi qoshildi.", true); }
+                HFormTozala(); YangilaHamma();
+            } catch (Exception ex) { Xabar(ex.Message, false); }
+        }
+
+        private void BtnM_Saqlash(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtMIsm.Text) || string.IsNullOrWhiteSpace(txtMTel.Text))
+            { Xabar("Ism va telefon raqamini kiriting!", false); return; }
+            try {
+                if (_tanlanganM != null) { _servis.MijozYangilash(_tanlanganM.Id, txtMIsm.Text, txtMTel.Text); Xabar("Mijoz yangilandi.", true); }
+                else { _servis.MijozQoshish(txtMIsm.Text, txtMTel.Text); Xabar("Yangi mijoz qoshildi.", true); }
+                MFormTozala(); YangilaHamma();
+            } catch (Exception ex) { Xabar(ex.Message, false); }
+        }
+
+        private void BtnBuyurtma_Tasdiq(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+        {
+            if (cbMijoz.SelectedItem == null || cbHaydovchi.SelectedItem == null ||
+                string.IsNullOrWhiteSpace(txtQayerdan.Text) || string.IsNullOrWhiteSpace(txtQayerga.Text) || string.IsNullOrWhiteSpace(txtNarx.Text))
+            { Xabar("Barcha maydonlarni toldiring!", false); return; }
+            if (!decimal.TryParse(txtNarx.Text, out decimal narx) || narx <= 0)
+            { Xabar("Narxni togri kiriting!", false); return; }
+            try {
+                var mijozlar = _servis.BarchaMijozlarniOlish();
+                var boshlar  = _servis.BoshHaydovchilarniOlish();
+                int mi = cbMijoz.SelectedIndex, hi = cbHaydovchi.SelectedIndex;
+                if (mi < 0 || mi >= mijozlar.Count || hi < 0 || hi >= boshlar.Count)
+                { Xabar("Tanlangan malumot notogri.", false); return; }
+                _servis.BuyurtmaYaratish(mijozlar[mi].Id, boshlar[hi].Id, txtQayerdan.Text, txtQayerga.Text, narx);
+                txtQayerdan.Text = ""; txtQayerga.Text = ""; txtNarx.Text = "";
+                cbMijoz.SelectedIndex = -1; cbHaydovchi.SelectedIndex = -1;
+                YangilaHamma(); Xabar("Buyurtma tasdiqlandi!", true);
+            } catch (Exception ex) { Xabar(ex.Message, false); }
+        }
+
+        private void YangilaHamma()
+        {
+            var haydovchilar = _servis.BarchaHaydovchilarniOlish();
+            _haydovchilar.Clear();
+            foreach (var h in haydovchilar) {
+                h.Holati = h.Holati == "Bosh" ? "🟢 Bosh" : "🔴 Band";
+                _haydovchilar.Add(h);
+            }
+            var mijozlar = _servis.BarchaMijozlarniOlish();
+            _mijozlar.Clear();
+            foreach (var m in mijozlar) _mijozlar.Add(m);
+            var buyurtmalar = _servis.BarchaBuyurtmalarniOlish();
+            _buyurtmalar.Clear();
+            foreach (var b in buyurtmalar)
+                _buyurtmalar.Add(new BuyurtmaView {
+                    Id = b.Id, MijozIsmi = b.Mijoz?.Ismi ?? "—", HaydovchiIsmi = b.Haydovchi?.Ismi ?? "—",
+                    Yonalish = $"{b.Qayerdan} → {b.Qayerga}", NarxMatn = $"{b.Narx:N0} som",
+                    SanaMatn = b.Sana.ToString("dd.MM.yyyy HH:mm")
+                });
+            var boshlar = _servis.BoshHaydovchilarniOlish();
+            cbMijoz.ItemsSource     = mijozlar.Select(m => m.Ismi).ToList();
+            cbHaydovchi.ItemsSource = boshlar.Select(h => $"{h.Ismi} ({h.MashinaRaqami})").ToList();
+            lblTushum.Text     = $"{_servis.KunlikTushum():N0} som";
+            lblJamiTushum.Text = $"{_servis.JamiTushum():N0} som";
+            lblFaolH.Text      = _servis.EngFaolHaydovchi();
+            lblFaolM.Text      = _servis.EngFaolMijoz();
+            lblJamiH.Text      = _servis.JamiHaydovchilar().ToString();
+            lblBoshH.Text      = _servis.BoshHaydovchilarSoni().ToString();
+            lblJamiM.Text      = _servis.JamiMijozlar().ToString();
+            lblJamiB.Text      = _servis.JamiBuyurtmalar().ToString();
+        }
+
+        private void PanelKo_rsat(Grid t) {
+            panelStatistika.IsVisible   = t == panelStatistika;
+            panelHaydovchilar.IsVisible = t == panelHaydovchilar;
+            panelMijozlar.IsVisible     = t == panelMijozlar;
+            panelBuyurtmalar.IsVisible  = t == panelBuyurtmalar;
+            YangilaHamma();
+        }
+
+        private void HFormTozala() {
+            txtHIsm.Text = ""; txtHPlate.Text = "";
+            _tanlanganH = null; dgHaydovchilar.SelectedItem = null;
+            btnHSaqlash.Content = "➕ Qoshish"; btnHSaqlash.Background = Brush.Parse("#16A34A");
+        }
+
+        private void MFormTozala() {
+            txtMIsm.Text = ""; txtMTel.Text = "";
+            _tanlanganM = null; dgMijozlar.SelectedItem = null;
+            btnMSaqlash.Content = "➕ Qoshish"; btnMSaqlash.Background = Brush.Parse("#16A34A");
+        }
+
+        private void Xabar(string matn, bool ok) {
+            lblXabar.Text       = (ok ? "✅ " : "❌ ") + matn;
+            lblXabar.Foreground = ok ? Brush.Parse("#15803D") : Brush.Parse("#DC2626");
+            lblXabar.Height     = 36;
+            lblXabar.Background = ok ? Brush.Parse("#F0FDF4") : Brush.Parse("#FEF2F2");
+            var t = new System.Timers.Timer(3000) { AutoReset = false };
+            t.Elapsed += (_, _) => Avalonia.Threading.Dispatcher.UIThread.Post(() => {
+                lblXabar.Text = ""; lblXabar.Height = 0; lblXabar.Background = Brushes.Transparent;
+            });
+            t.Start();
+        }
+
+        private static Button NavBtn(string matn, Action onClick) {
+            var b = new Button {
+                Content = matn, HorizontalAlignment = HorizontalAlignment.Stretch,
+                HorizontalContentAlignment = HorizontalAlignment.Left,
+                Padding = new Thickness(14,11), Background = Brushes.Transparent,
+                Foreground = Brush.Parse("#94A3B8"), FontSize = 14, CornerRadius = new CornerRadius(8)
+            };
+            b.Click += (_, _) => onClick(); return b;
+        }
+
+        private static Button Btn(string matn, string rang) => new Button {
+            Content = matn, Background = Brush.Parse(rang), Foreground = Brushes.White,
+            Padding = new Thickness(14,8), FontWeight = FontWeight.SemiBold, CornerRadius = new CornerRadius(6)
+        };
+
+        private static TextBlock Sarlavha(string matn) => new TextBlock {
+            Text = matn, FontSize = 20, FontWeight = FontWeight.Bold,
+            Foreground = Brush.Parse("#1E293B"), Margin = new Thickness(0,0,0,14)
+        };
+
+        private Border StatKarta(string label, string rang, out TextBlock qiymat)
+        {
+            var st = new StackPanel { Spacing = 6 };
+            st.Children.Add(new TextBlock { Text = label, FontSize = 13, Foreground = Brush.Parse("#64748B"), TextWrapping = TextWrapping.Wrap });
+            qiymat = new TextBlock { FontSize = 20, FontWeight = FontWeight.Bold, Foreground = Brush.Parse(rang) };
+            st.Children.Add(qiymat);
+            return new Border {
+                Background = Brushes.White, CornerRadius = new CornerRadius(12),
+                Padding = new Thickness(18,16), Margin = new Thickness(0,0,14,14),
+                Width = 300, Child = st,
+                BorderBrush = Brush.Parse("#E2E8F0"), BorderThickness = new Thickness(1)
+            };
+        }
+
+        private static DataGrid Jadval() => new DataGrid {
+            AutoGenerateColumns = false, IsReadOnly = true, Background = Brushes.White,
+            GridLinesVisibility = DataGridGridLinesVisibility.Horizontal,
+            BorderBrush = Brush.Parse("#E2E8F0"), BorderThickness = new Thickness(1),
+            RowHeight = 46, ColumnHeaderHeight = 48, FontSize = 14,
+            CanUserResizeColumns = true, CanUserSortColumns = true,
+            SelectionMode = DataGridSelectionMode.Single,
+            HorizontalAlignment = HorizontalAlignment.Stretch,
+            VerticalAlignment = VerticalAlignment.Stretch
+        };
+
+        private static DataGridTextColumn Ustun(string sarlavha, string maydon, double kenglik) =>
+            new DataGridTextColumn {
+                Header = sarlavha, Binding = new Avalonia.Data.Binding(maydon), Width = new DataGridLength(kenglik)
+            };
+    }
+
+    public class BuyurtmaView {
+        public int    Id            { get; set; }
+        public string MijozIsmi     { get; set; } = "";
+        public string HaydovchiIsmi { get; set; } = "";
+        public string Yonalish      { get; set; } = "";
+        public string NarxMatn      { get; set; } = "";
+        public string SanaMatn      { get; set; } = "";
+    }
+}

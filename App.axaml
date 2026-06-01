@@ -1,0 +1,25 @@
+
+<Application
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    x:Class="TaxiApp.App">
+
+<Application.Styles>
+
+    <FluentTheme />
+
+    <StyleInclude
+        Source="avares://Avalonia.Controls.DataGrid/Themes/Fluent.xaml"/>
+
+    <Style Selector="DataGridColumnHeader">
+        <Setter Property="Background" Value="#F1F5F9"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Foreground" Value="#0F172A"/>
+    </Style>
+
+</Application.Styles>
+
+
+</Application>
+

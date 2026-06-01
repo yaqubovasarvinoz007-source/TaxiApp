@@ -1,0 +1,33 @@
+
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="TaxiApp.Views.LoginWindow"
+        Title="TaxiPro — Kirish"
+        Width="420" Height="520"
+        WindowStartupLocation="CenterScreen"
+        CanResize="false"
+        Background="#0F172A">
+    <Border Background="#1E293B" CornerRadius="16" Margin="30" Padding="36">
+        <StackPanel Spacing="20" VerticalAlignment="Center">
+            <StackPanel HorizontalAlignment="Center" Spacing="6">
+                <TextBlock Text="🚕" FontSize="52" HorizontalAlignment="Center"/>
+                <TextBlock Text="TaxiPro" FontSize="26" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center"/>
+                <TextBlock Text="Boshqaruv tizimiga xush kelibsiz" FontSize="13" Foreground="#64748B" HorizontalAlignment="Center"/>
+            </StackPanel>
+            <TextBlock Name="lblXabar" FontSize="13" HorizontalAlignment="Center" IsVisible="False"/>
+            <StackPanel Spacing="6">
+                <TextBlock Text="Foydalanuvchi nomi" FontSize="13" Foreground="#94A3B8"/>
+                <TextBox Name="txtLogin" Watermark="admin" FontSize="14" Height="42" CornerRadius="8"/>
+            </StackPanel>
+            <StackPanel Spacing="6">
+                <TextBlock Text="Parol" FontSize="13" Foreground="#94A3B8"/>
+                <TextBox Name="txtParol" Watermark="••••••••" PasswordChar="•" FontSize="14" Height="42" CornerRadius="8"/>
+            </StackPanel>
+            <Button Name="btnKirish" Content="🔐  Tizimga Kirish"
+                    HorizontalAlignment="Stretch" HorizontalContentAlignment="Center"
+                    Height="46" FontSize="15" FontWeight="SemiBold"
+                    Background="#2563EB" Foreground="White" CornerRadius="10" Margin="0,8,0,0"/>
+            <TextBlock Text="Login: admin  |  Parol: 1234" FontSize="12" Foreground="#334155" HorizontalAlignment="Center"/>
+        </StackPanel>
+    </Border>
+</Window>

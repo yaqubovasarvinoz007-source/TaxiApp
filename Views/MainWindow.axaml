@@ -1,0 +1,91 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="TaxiApp.Views.MainWindow"
+        Title="TaxiPro — Boshqaruv Tizimi"
+        Width="1150" Height="700"
+        MinWidth="900" MinHeight="600"
+        WindowStartupLocation="CenterScreen"
+         WindowState="Maximized"
+        Background="#F1F5F9"
+        FontFamily="Segoe UI, -apple-system, BlinkMacSystemFont">
+   
+    <!-- Asosiy Grid - Sidebar + Content -->
+    <Grid ColumnDefinitions="260,*">
+        
+        <!-- SIDEBAR -->
+        <DockPanel Grid.Column="0" Background="#0F172A" LastChildFill="True">
+            
+            <!-- Logo -->
+            <StackPanel DockPanel.Dock="Top" Margin="0,28,0,24" HorizontalAlignment="Center">
+                <TextBlock Text="🚕" FontSize="36" HorizontalAlignment="Center"/>
+                <TextBlock Text="TaxiPro" Foreground="White" FontSize="18" FontWeight="Bold" HorizontalAlignment="Center"/>
+                <TextBlock Text="Boshqaruv Tizimi" Foreground="#64748B" FontSize="12" HorizontalAlignment="Center"/>
+            </StackPanel>
+            
+            <!-- Copyright -->
+            <TextBlock DockPanel.Dock="Bottom" Text="© 2026 TaxiPro" Foreground="#334155" FontSize="11" 
+                       HorizontalAlignment="Center" Margin="0,0,0,12"/>
+            
+            <!-- Navigation -->
+            <StackPanel Spacing="4" Margin="8,0" DockPanel.Dock="Top">
+                <Button Content="📊  Ma'lumotlar" 
+                        HorizontalAlignment="Stretch" 
+                        HorizontalContentAlignment="Left"
+                        Padding="14,11" 
+                        Background="Transparent" 
+                        Foreground="#94A3B8" 
+                        FontSize="14" 
+                        CornerRadius="8"
+                        Name="BtnStats"/>
+                
+                <Button Content="🚗  Haydovchilar" 
+                        HorizontalAlignment="Stretch" 
+                        HorizontalContentAlignment="Left"
+                        Padding="14,11" 
+                        Background="Transparent" 
+                        Foreground="#94A3B8" 
+                        FontSize="14" 
+                        CornerRadius="8"
+                        Name="BtnDrivers"/>
+                
+                <Button Content="👥  Mijozlar" 
+                        HorizontalAlignment="Stretch" 
+                        HorizontalContentAlignment="Left"
+                        Padding="14,11" 
+                        Background="Transparent" 
+                        Foreground="#94A3B8" 
+                        FontSize="14" 
+                        CornerRadius="8"
+                        Name="BtnClients"/>
+                
+                <Button Content="📋  Buyurtmalar" 
+                        HorizontalAlignment="Stretch" 
+                        HorizontalContentAlignment="Left"
+                        Padding="14,11" 
+                        Background="Transparent" 
+                        Foreground="#94A3B8" 
+                        FontSize="14" 
+                        CornerRadius="8"
+                        Name="BtnOrders"/>
+            </StackPanel>
+            
+        </DockPanel>
+        
+        <!-- MAIN CONTENT -->
+        <Grid Grid.Column="1" RowDefinitions="Auto,*">
+            
+            <!-- Message Bar -->
+            <Border Grid.Row="0" Height="0" Background="White" Padding="16,0" VerticalAlignment="Center" Name="MessageBar">
+                <TextBlock FontSize="13" Name="MessageText" VerticalAlignment="Center"/>
+            </Border>
+            
+            <!-- Content Area -->
+            <ScrollViewer Grid.Row="1" Margin="20">
+                <StackPanel Spacing="0" Name="ContentPanel"/>
+            </ScrollViewer>
+            
+        </Grid>
+        
+    </Grid>
+    
+</Window>
