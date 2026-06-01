@@ -1,0 +1,62 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="TaxiApp.Views.MijozSharhları"
+        Title="Mijoz Sharhlari" 
+        Width="700" 
+        Height="600"
+        Background="#F5F5F5">
+
+    <StackPanel Margin="20" Spacing="15">
+        <TextBlock Text="Mijoz Sharhlari va Reytinglar" FontSize="24" FontWeight="Bold" Foreground="#333"/>
+
+        <!-- Reyting Summary -->
+        <Border Background="White" CornerRadius="8" Padding="15">
+            <Grid ColumnDefinitions="*,*">
+                <StackPanel>
+                    <TextBlock Text="O'rtacha Reyting" Foreground="#666" FontSize="12"/>
+                    <TextBlock Text="{Binding OrtaReyting, StringFormat='{0:0.0} ⭐'}" FontSize="28" FontWeight="Bold" Foreground="#F44336"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1">
+                    <TextBlock Text="Jami Sharhlar" Foreground="#666" FontSize="12"/>
+                    <TextBlock Text="{Binding JamiSharh}" FontSize="28" FontWeight="Bold" Foreground="#2196F3"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <!-- Reviews List -->
+        <TextBlock Text="Barcha Sharhlari" FontSize="16" FontWeight="Bold" Foreground="#333"/>
+        
+        <ListBox Items="{Binding Sharhlari}" Height="400">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Border Background="White" Padding="15" Margin="0,5" CornerRadius="8">
+                        <StackPanel Spacing="8">
+                            <!-- Header: Rating and Date -->
+                            <StackPanel Orientation="Horizontal" Spacing="10">
+                                <TextBlock Text="{Binding Reyting, StringFormat='⭐ {0}/5'}" 
+                                           FontWeight="Bold" 
+                                           FontSize="14"
+                                           Foreground="#F44336"/>
+                                <TextBlock Text="{Binding Sana, StringFormat='{0:dd.MM.yyyy HH:mm}'}" 
+                                           Foreground="#999" 
+                                           FontSize="12"/>
+                            </StackPanel>
+                            
+                            <!-- Review Text -->
+                            <TextBlock Text="{Binding Sharh}" 
+                                       Foreground="#333" 
+                                       FontSize="13"
+                                       TextWrapping="Wrap"/>
+                            
+                            <!-- Customer Name -->
+                            <TextBlock Text="{Binding Mijoz.Ismi, StringFormat='— {0}'}" 
+                                       Foreground="#666" 
+                                       FontSize="11"
+                                       FontStyle="Italic"/>
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </StackPanel>
+</Window>
