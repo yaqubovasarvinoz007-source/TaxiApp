@@ -1,0 +1,55 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="TaxiApp.Views.HaydovchiDashboard"
+        Title="Haydovchi Dashboard" 
+        Width="800" 
+        Height="600"
+        Background="#F5F5F5">
+
+    <StackPanel Margin="20" Spacing="15">
+        <TextBlock Text="Haydovchi Dashboard" FontSize="28" FontWeight="Bold" Foreground="#333"/>
+
+        <Grid ColumnDefinitions="*,*,*,*" RowDefinitions="Auto" Spacing="10">
+            <Border Grid.Column="0" Background="White" CornerRadius="8" Padding="15">
+                <StackPanel>
+                    <TextBlock Text="Bugungi Daromad" Foreground="#666" FontSize="12"/>
+                    <TextBlock Text="{Binding BugunDaromad, StringFormat='{0:C}'}" FontSize="24" FontWeight="Bold" Foreground="#4CAF50"/>
+                </StackPanel>
+            </Border>
+
+            <Border Grid.Column="1" Background="White" CornerRadius="8" Padding="15">
+                <StackPanel>
+                    <TextBlock Text="Jami Daromad" Foreground="#666" FontSize="12"/>
+                    <TextBlock Text="{Binding JamiDaromad, StringFormat='{0:C}'}" FontSize="24" FontWeight="Bold" Foreground="#2196F3"/>
+                </StackPanel>
+            </Border>
+
+            <Border Grid.Column="2" Background="White" CornerRadius="8" Padding="15">
+                <StackPanel>
+                    <TextBlock Text="Hisobdagi Pul" Foreground="#666" FontSize="12"/>
+                    <TextBlock Text="{Binding HisobdagiPul, StringFormat='{0:C}'}" FontSize="24" FontWeight="Bold" Foreground="#FF9800"/>
+                </StackPanel>
+            </Border>
+
+            <Border Grid.Column="3" Background="White" CornerRadius="8" Padding="15">
+                <StackPanel>
+                    <TextBlock Text="Reyting" Foreground="#666" FontSize="12"/>
+                    <TextBlock Text="{Binding Reyting, StringFormat='{0:0.0} ⭐'}" FontSize="24" FontWeight="Bold" Foreground="#F44336"/>
+                </StackPanel>
+            </Border>
+        </Grid>
+
+        <StackPanel Orientation="Horizontal" Spacing="10" Margin="0,20,0,0">
+            <Button Content="Pul Yechish" Background="#4CAF50" Foreground="White" Padding="15,10" FontSize="14"/>
+            <Button Content="Sharhlarni Ko'rish" Background="#2196F3" Foreground="White" Padding="15,10" FontSize="14"/>
+            <Button Content="Buyurtmalar" Background="#FF9800" Foreground="White" Padding="15,10" FontSize="14"/>
+        </StackPanel>
+
+        <Border Background="White" CornerRadius="8" Padding="15" Margin="0,20,0,0">
+            <StackPanel>
+                <TextBlock Text="Bugun Yo'lovchilar" Foreground="#666" FontSize="14" FontWeight="Bold"/>
+                <TextBlock Text="{Binding YolovchiSoni}" FontSize="32" FontWeight="Bold" Foreground="#333" Margin="0,10,0,0"/>
+            </StackPanel>
+        </Border>
+    </StackPanel>
+</Window>
