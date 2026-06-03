@@ -1,0 +1,413 @@
+using Avalonia;
+using Avalonia.Controls;
+using Avalonia.Media;
+using System.Linq;
+using TaxiApp.Models;
+namespace TaxiApp.Views
+{
+    public partial class DriverDashboard : Window
+    {
+        private bool isDarkMode = false;
+private readonly TaxiServis _servis = new();
+private readonly int _driverId;
+
+public DriverDashboard(int driverId)
+{
+    _driverId = driverId;
+
+    InitializeComponent();
+    ShowDashboard();
+}
+
+private void Profil_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+{
+    var h = _servis.BarchaHaydovchilarniOlish()
+        .FirstOrDefault(x => x.Id == _driverId);
+
+    if (h == null) return;
+
+   var content = new StackPanel
+{
+    Margin = new Thickness(20)
+};
+
+var card = new Border
+{
+    Background = Brushes.White,
+    BorderBrush = Brush.Parse("#E2E8F0"),
+    BorderThickness = new Thickness(1),
+    CornerRadius = new CornerRadius(16),
+    Padding = new Thickness(25),
+    Width = 500
+};
+
+var profile = new StackPanel
+{
+    Spacing = 12
+};
+
+profile.Children.Add(new TextBlock
+{
+    Text = "👤 Profilim",
+    FontSize = 28,
+    FontWeight = FontWeight.Bold
+});
+
+profile.Children.Add(new Border
+{
+    Height = 1,
+    Background = Brush.Parse("#E2E8F0")
+});
+
+profile.Children.Add(new TextBlock
+{
+    Text = $"🆔 ID: {h.Id}",
+    FontSize = 18
+});
+
+profile.Children.Add(new TextBlock
+{
+    Text = $"👤 Ismi: {h.Ismi}",
+    FontSize = 18
+});
+
+profile.Children.Add(new TextBlock
+{
+    Text = $"🚕 Mashina: {h.MashinaRaqami}",
+    FontSize = 18
+});
+
+profile.Children.Add(new TextBlock
+{
+    Text = $"📍 Holati: {h.Holati}",
+    FontSize = 18
+});
+
+card.Child = profile;
+content.Children.Add(card);
+
+   
+    MainContent.Content = content;
+}
+        private void Dashboard_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+        {
+            ShowDashboard();
+        }
+private void Yolovchilar_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+{
+    var buyurtmalar = _servis.HaydovchiBuyurtmalariniOlish(_driverId);
+
+    var content = new StackPanel { Spacing = 15 };
+
+    content.Children.Add(
+        new TextBlock
+        {
+            Text = "🚕 Mening Buyurtmalarim",
+            FontSize = 24,
+            FontWeight = FontWeight.Bold,
+            Foreground = new SolidColorBrush(Color.Parse("#333")),
+            Margin = new Avalonia.Thickness(0, 0, 0, 10)
+        });
+
+    var border = new Border
+    {
+        Background = new SolidColorBrush(Color.Parse("#FFFFFF")),
+        CornerRadius = new Avalonia.CornerRadius(8),
+        Padding = new Avalonia.Thickness(15)
+    };
+
+    var stack = new StackPanel { Spacing = 10 };
+
+    if (buyurtmalar.Count == 0)
+    {
+        stack.Children.Add(
+            new TextBlock
+            {
+                Text = "Buyurtmalar topilmadi",
+                Foreground = new SolidColorBrush(Color.Parse("#999"))
+            });
+    }
+    else
+    {
+        foreach (var b in buyurtmalar)
+{
+    var item = new StackPanel { Spacing = 5 };
+
+    item.Children.Add(
+        new TextBlock
+        {
+            Text =
+                $"{b.Qayerdan} → {b.Qayerga} | " +
+                $"{b.Narx:N0} so'm | " +
+                $"{b.Holat}"
+        });
+
+    if (b.Holat == "Aktiv")
+    {
+        var btn = new Button
+        {
+            Content = "✅ Yakunlash"
+        };
+
+        btn.Click += (_, _) =>
+        {
+            _servis.BuyurtmaYakunlash(b.Id);
+            Yolovchilar_Click(null, null);
+        };
+
+        item.Children.Add(btn);
+    }
+
+    stack.Children.Add(
+        new Border
+        {
+            Background = new SolidColorBrush(Color.Parse("#F8FAFC")),
+            Padding = new Avalonia.Thickness(10),
+            Child = item
+        });
+}
+    }
+
+    border.Child = stack;
+    content.Children.Add(border);
+
+    MainContent.Content = content;
+}
+
+        private void Daromad_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+        {
+            var content = new StackPanel { Spacing = 15 };
+            content.Children.Add(new TextBlock { Text = "💰 Daromad Statistikasi", FontSize = 24, FontWeight = FontWeight.Bold, Foreground = new SolidColorBrush(Color.Parse("#333")), Margin = new Avalonia.Thickness(0, 0, 0, 10) });
+            
+            var grid = new Grid { ColumnDefinitions = Avalonia.Controls.ColumnDefinitions.Parse("*,*") };
+            
+            var daromad = _servis.HaydovchiDaromadiniOlish(_driverId);
+
+            var stat1 = CreateStatBox("Bugungi Daromad", $"{daromad?.BugunDaromad ?? 0:N0} so'm", "#4CAF50");
+            grid.Children.Add(stat1);
+
+            var stat2 = CreateStatBox("Jami Daromad", $"{daromad?.JamiDaromad ?? 0:N0} so'm", "#2196F3");
+            grid.Children.Add(stat2);
+            Grid.SetColumn(stat2, 1);
+            
+            content.Children.Add(grid);
+            MainContent.Content = content;
+        }
+
+        private void Sharhlar_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+{
+    var sharhlar = _servis.HaydovchiSharhlariniOlish(_driverId);
+    var ortacha = _servis.HaydovchiOrtachaReytingi(_driverId);
+
+    var content = new StackPanel { Spacing = 15 };
+
+    content.Children.Add(
+        new TextBlock
+        {
+            Text = "⭐ Sharhlar",
+            FontSize = 24,
+            FontWeight = FontWeight.Bold,
+            Foreground = new SolidColorBrush(Color.Parse("#333")),
+            Margin = new Avalonia.Thickness(0, 0, 0, 10)
+        });
+
+    var border = new Border
+    {
+        Background = new SolidColorBrush(Color.Parse("#FFFFFF")),
+        CornerRadius = new Avalonia.CornerRadius(8),
+        Padding = new Avalonia.Thickness(15)
+    };
+
+    var stack = new StackPanel { Spacing = 10 };
+
+    stack.Children.Add(
+        new TextBlock
+        {
+            Text = $"O'rtacha Reyting: {ortacha:0.0} ⭐",
+            FontWeight = FontWeight.Bold,
+            Foreground = new SolidColorBrush(Color.Parse("#FF9800"))
+        });
+
+    stack.Children.Add(
+        new TextBlock
+        {
+            Text = $"Jami Sharhlar: {sharhlar.Count}",
+            Foreground = new SolidColorBrush(Color.Parse("#666"))
+        });
+
+    foreach (var s in sharhlar)
+    {
+        stack.Children.Add(
+            new Border
+            {
+                Background = new SolidColorBrush(Color.Parse("#F8FAFC")),
+                Padding = new Avalonia.Thickness(10),
+                Child = new TextBlock
+                {
+                    Text = $"{new string('⭐', s.Reyting)}\n{s.Sharh}"
+                }
+            });
+    }
+
+    border.Child = stack;
+    content.Children.Add(border);
+
+    MainContent.Content = content;
+}
+
+        private void PulYechish_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+        {
+            var content = new StackPanel { Spacing = 15 };
+            content.Children.Add(new TextBlock { Text = "💸 Pul Yechish", FontSize = 24, FontWeight = FontWeight.Bold, Foreground = new SolidColorBrush(Color.Parse("#333")), Margin = new Avalonia.Thickness(0, 0, 0, 10) });
+            
+            var border = new Border { Background = new SolidColorBrush(Color.Parse("#FFFFFF")), CornerRadius = new Avalonia.CornerRadius(8), Padding = new Avalonia.Thickness(15) };
+            var stack = new StackPanel { Spacing = 15 };
+            
+            stack.Children.Add(new TextBlock { Text = "Yechmoqchi bo'lgan summa:", FontWeight = FontWeight.Bold });
+            var textBox = new TextBox { Height = 40, Watermark = "Summa kiriting..." };
+            stack.Children.Add(textBox);
+            
+            var btn = new Button { Content = "So'rov Yuborish", Background = new SolidColorBrush(Color.Parse("#4CAF50")), Foreground = new SolidColorBrush(Color.Parse("#FFFFFF")), Padding = new Avalonia.Thickness(15, 10), HorizontalAlignment = Avalonia.Layout.HorizontalAlignment.Left, Margin = new Avalonia.Thickness(0, 10, 0, 0) };
+            
+            btn.Click += (_, _) =>
+{
+    if (!decimal.TryParse(textBox.Text, out var summa))
+    {
+        textBox.Text = "";
+        textBox.Watermark = "Noto'g'ri summa!";
+        return;
+    }
+
+    bool ok = _servis.PulYechishSoroviYubor(_driverId, summa);
+
+    if (ok)
+    {
+        textBox.Text = "";
+        textBox.Watermark = "So'rov yuborildi ✅";
+    }
+    else
+    {
+        textBox.Text = "";
+        textBox.Watermark = "Balans yetarli emas ❌";
+    }
+};
+stack.Children.Add(btn);
+            
+            border.Child = stack;
+            content.Children.Add(border);
+            
+            MainContent.Content = content;
+        }
+
+        private void TungiRejim_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+        {
+            isDarkMode = !isDarkMode;
+            
+            if (isDarkMode)
+            {
+                Background = new SolidColorBrush(Color.Parse("#0F172A"));
+            }
+            else
+            {
+                Background = new SolidColorBrush(Color.Parse("#F5F5F5"));
+            }
+        }
+
+        private void Chiqish_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+        {
+            new LoginWindow().Show();
+            Close();
+        }
+
+       private void ShowDashboard()
+{
+    var daromad = _servis.HaydovchiDaromadiniOlish(_driverId);
+
+    string bugun = $"{daromad?.BugunDaromad ?? 0:N0} so'm";
+    string yolovchi = $"{daromad?.YolovchiSoni ?? 0}";
+    string reyting = $"{daromad?.Reyting ?? 5.0:0.0} ⭐";
+    string hisobdagiPul = $"{daromad?.HisobdagiPul ?? 0:N0} so'm";
+
+    var content = new StackPanel
+    {
+        Spacing = 20,
+        Margin = new Avalonia.Thickness(10)
+    };
+
+    content.Children.Add(new TextBlock
+    {
+        Text = "🚕 Haydovchi Paneli",
+        FontSize = 30,
+        FontWeight = FontWeight.Bold,
+        Foreground = Brushes.Black
+    });
+
+    content.Children.Add(new TextBlock
+    {
+        Text = "Bugungi faoliyatingiz",
+        FontSize = 15,
+        Foreground = Brushes.Gray
+    });
+
+    var grid = new Grid
+    {
+        ColumnDefinitions =
+            Avalonia.Controls.ColumnDefinitions.Parse("*,*"),
+        RowDefinitions =
+            Avalonia.Controls.RowDefinitions.Parse("*,*")
+    };
+
+    var s1 = CreateStatBox("💰 Bugungi Daromad", bugun, "#22C55E");
+    var s2 = CreateStatBox("🚕 Yo'lovchilar", yolovchi, "#3B82F6");
+    var s3 = CreateStatBox("⭐ Reyting", reyting, "#F59E0B");
+    var s4 = CreateStatBox("🏦 Hisobdagi Pul", hisobdagiPul, "#10B981");
+
+    grid.Children.Add(s1);
+
+    grid.Children.Add(s2);
+    Grid.SetColumn(s2, 1);
+
+    grid.Children.Add(s3);
+    Grid.SetRow(s3, 1);
+
+    grid.Children.Add(s4);
+    Grid.SetColumn(s4, 1);
+    Grid.SetRow(s4, 1);
+
+    content.Children.Add(grid);
+
+    MainContent.Content = content;
+}
+
+       private Border CreateStatBox(string title, string value, string color)
+{
+    return new Border
+    {
+        Background = Brushes.White,
+        CornerRadius = new Avalonia.CornerRadius(16),
+        Padding = new Avalonia.Thickness(20),
+        Margin = new Avalonia.Thickness(8),
+        Child = new StackPanel
+        {
+            Spacing = 8,
+            Children =
+            {
+                new TextBlock
+                {
+                    Text = title,
+                    FontSize = 14,
+                    Foreground = Brushes.Gray
+                },
+                new TextBlock
+                {
+                    Text = value,
+                    FontSize = 28,
+                    FontWeight = FontWeight.Bold,
+                    Foreground = new SolidColorBrush(Color.Parse(color))
+                }
+            }
+        }
+    };
+}
+    }
+}

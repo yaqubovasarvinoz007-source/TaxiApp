@@ -25,5 +25,6 @@ namespace TaxiApp.Models
         public decimal Narx { get; set; }
 
         public DateTime Sana { get; set; } = DateTime.Now;
+    public string Holat { get; set; } = "Aktiv";
     }
 }

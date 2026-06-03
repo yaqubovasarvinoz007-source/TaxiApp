@@ -1,511 +1,14 @@
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/BuildHost-net472/Microsoft.Build.Locator.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/BuildHost-net472/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.exe
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/BuildHost-net472/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.exe.config
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/BuildHost-net472/Microsoft.IO.Redist.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/BuildHost-net472/Newtonsoft.Json.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/BuildHost-net472/System.Buffers.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/BuildHost-net472/System.Collections.Immutable.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/BuildHost-net472/System.CommandLine.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/BuildHost-net472/System.Memory.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/BuildHost-net472/System.Numerics.Vectors.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/BuildHost-net472/System.Runtime.CompilerServices.Unsafe.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/BuildHost-net472/System.Threading.Tasks.Extensions.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/BuildHost-net472/cs/System.CommandLine.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/BuildHost-net472/de/System.CommandLine.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/BuildHost-net472/es/System.CommandLine.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/BuildHost-net472/fr/System.CommandLine.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/BuildHost-net472/it/System.CommandLine.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/BuildHost-net472/ja/System.CommandLine.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/BuildHost-net472/ko/System.CommandLine.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/BuildHost-net472/pl/System.CommandLine.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/BuildHost-net472/pt-BR/System.CommandLine.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/BuildHost-net472/ru/System.CommandLine.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/BuildHost-net472/tr/System.CommandLine.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/BuildHost-net472/zh-Hans/System.CommandLine.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/BuildHost-net472/zh-Hant/System.CommandLine.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/BuildHost-netcore/Microsoft.Build.Locator.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/BuildHost-netcore/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.deps.json
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/BuildHost-netcore/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/BuildHost-netcore/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.dll.config
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/BuildHost-netcore/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.runtimeconfig.json
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/BuildHost-netcore/Newtonsoft.Json.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/BuildHost-netcore/System.Collections.Immutable.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/BuildHost-netcore/System.CommandLine.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/BuildHost-netcore/cs/System.CommandLine.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/BuildHost-netcore/de/System.CommandLine.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/BuildHost-netcore/es/System.CommandLine.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/BuildHost-netcore/fr/System.CommandLine.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/BuildHost-netcore/it/System.CommandLine.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/BuildHost-netcore/ja/System.CommandLine.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/BuildHost-netcore/ko/System.CommandLine.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/BuildHost-netcore/pl/System.CommandLine.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/BuildHost-netcore/pt-BR/System.CommandLine.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/BuildHost-netcore/ru/System.CommandLine.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/BuildHost-netcore/tr/System.CommandLine.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/BuildHost-netcore/zh-Hans/System.CommandLine.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/BuildHost-netcore/zh-Hant/System.CommandLine.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/TaxiApp
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/TaxiApp.deps.json
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/TaxiApp.runtimeconfig.json
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/TaxiApp.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/TaxiApp.pdb
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/Avalonia.Base.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/Avalonia.Controls.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/Avalonia.DesignerSupport.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/Avalonia.Dialogs.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/Avalonia.Markup.Xaml.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/Avalonia.Markup.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/Avalonia.Metal.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/Avalonia.MicroCom.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/Avalonia.OpenGL.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/Avalonia.Vulkan.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/Avalonia.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/Avalonia.Controls.ColorPicker.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/Avalonia.Controls.DataGrid.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/Avalonia.Desktop.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/Avalonia.Diagnostics.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/Avalonia.Fonts.Inter.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/Avalonia.FreeDesktop.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/Avalonia.Native.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/Avalonia.Remote.Protocol.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/Avalonia.Skia.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/Avalonia.Themes.Fluent.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/Avalonia.Themes.Simple.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/Avalonia.Win32.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/Avalonia.X11.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/CommunityToolkit.Mvvm.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/HarfBuzzSharp.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/Humanizer.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/MicroCom.Runtime.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/Microsoft.Build.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/Microsoft.Build.Framework.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/Microsoft.Build.Tasks.Core.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/Microsoft.Build.Utilities.Core.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/Microsoft.CodeAnalysis.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/Microsoft.CodeAnalysis.CSharp.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/Microsoft.CodeAnalysis.CSharp.Workspaces.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/Microsoft.CodeAnalysis.Workspaces.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/Microsoft.CodeAnalysis.ExternalAccess.RazorCompiler.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/Microsoft.Data.Sqlite.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/Microsoft.EntityFrameworkCore.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/Microsoft.EntityFrameworkCore.Abstractions.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/Microsoft.EntityFrameworkCore.Design.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/Microsoft.EntityFrameworkCore.Relational.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/Microsoft.EntityFrameworkCore.Sqlite.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/Microsoft.Extensions.Caching.Abstractions.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/Microsoft.Extensions.Caching.Memory.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/Microsoft.Extensions.Configuration.Abstractions.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/Microsoft.Extensions.DependencyInjection.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/Microsoft.Extensions.DependencyModel.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/Microsoft.Extensions.Logging.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/Microsoft.Extensions.Logging.Abstractions.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/Microsoft.Extensions.Options.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/Microsoft.Extensions.Primitives.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/Microsoft.NET.StringTools.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/Mono.TextTemplating.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/Newtonsoft.Json.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/SkiaSharp.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/SQLitePCLRaw.batteries_v2.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/SQLitePCLRaw.core.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/SQLitePCLRaw.provider.e_sqlite3.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/System.CodeDom.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/System.Composition.AttributedModel.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/System.Composition.Convention.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/System.Composition.Hosting.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/System.Composition.Runtime.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/System.Composition.TypedParts.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/System.Configuration.ConfigurationManager.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/System.Diagnostics.EventLog.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/System.Formats.Nrbf.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/System.Reflection.MetadataLoadContext.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/System.Resources.Extensions.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/System.Security.Cryptography.Pkcs.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/System.Security.Cryptography.ProtectedData.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/System.Security.Cryptography.Xml.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/System.Security.Permissions.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/System.Windows.Extensions.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/Tmds.DBus.Protocol.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/cs/Microsoft.CodeAnalysis.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/de/Microsoft.CodeAnalysis.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/es/Microsoft.CodeAnalysis.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/fr/Microsoft.CodeAnalysis.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/it/Microsoft.CodeAnalysis.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/ja/Microsoft.CodeAnalysis.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/ko/Microsoft.CodeAnalysis.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/pl/Microsoft.CodeAnalysis.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/pt-BR/Microsoft.CodeAnalysis.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/ru/Microsoft.CodeAnalysis.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/tr/Microsoft.CodeAnalysis.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/zh-Hans/Microsoft.CodeAnalysis.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/zh-Hant/Microsoft.CodeAnalysis.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/cs/Microsoft.CodeAnalysis.CSharp.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/de/Microsoft.CodeAnalysis.CSharp.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/es/Microsoft.CodeAnalysis.CSharp.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/fr/Microsoft.CodeAnalysis.CSharp.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/it/Microsoft.CodeAnalysis.CSharp.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/ja/Microsoft.CodeAnalysis.CSharp.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/ko/Microsoft.CodeAnalysis.CSharp.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/pl/Microsoft.CodeAnalysis.CSharp.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/pt-BR/Microsoft.CodeAnalysis.CSharp.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/ru/Microsoft.CodeAnalysis.CSharp.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/tr/Microsoft.CodeAnalysis.CSharp.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/cs/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/de/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/es/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/fr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/it/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/ja/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/ko/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/pl/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/pt-BR/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/ru/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/tr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/cs/Microsoft.CodeAnalysis.Workspaces.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/de/Microsoft.CodeAnalysis.Workspaces.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/es/Microsoft.CodeAnalysis.Workspaces.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/fr/Microsoft.CodeAnalysis.Workspaces.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/it/Microsoft.CodeAnalysis.Workspaces.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/ja/Microsoft.CodeAnalysis.Workspaces.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/ko/Microsoft.CodeAnalysis.Workspaces.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/pl/Microsoft.CodeAnalysis.Workspaces.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/pt-BR/Microsoft.CodeAnalysis.Workspaces.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/ru/Microsoft.CodeAnalysis.Workspaces.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/tr/Microsoft.CodeAnalysis.Workspaces.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/zh-Hans/Microsoft.CodeAnalysis.Workspaces.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/cs/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/de/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/es/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/fr/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/it/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/ja/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/ko/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/pl/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/pt-BR/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/ru/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/tr/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/zh-Hans/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/runtimes/win-arm64/native/av_libglesv2.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/runtimes/win-x64/native/av_libglesv2.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/runtimes/win-x86/native/av_libglesv2.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/runtimes/osx/native/libAvaloniaNative.dylib
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/runtimes/linux-arm/native/libHarfBuzzSharp.so
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/runtimes/linux-arm64/native/libHarfBuzzSharp.so
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/runtimes/linux-musl-x64/native/libHarfBuzzSharp.so
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/runtimes/linux-x64/native/libHarfBuzzSharp.so
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/runtimes/osx/native/libHarfBuzzSharp.dylib
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/runtimes/win-arm64/native/libHarfBuzzSharp.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/runtimes/win-x64/native/libHarfBuzzSharp.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/runtimes/win-x86/native/libHarfBuzzSharp.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/runtimes/linux-arm/native/libSkiaSharp.so
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/runtimes/linux-arm64/native/libSkiaSharp.so
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/runtimes/linux-musl-x64/native/libSkiaSharp.so
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/runtimes/linux-x64/native/libSkiaSharp.so
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/runtimes/osx/native/libSkiaSharp.dylib
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/runtimes/win-arm64/native/libSkiaSharp.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/runtimes/win-x64/native/libSkiaSharp.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/runtimes/win-x86/native/libSkiaSharp.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/runtimes/browser-wasm/nativeassets/net9.0/e_sqlite3.a
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/runtimes/linux-arm/native/libe_sqlite3.so
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/runtimes/linux-arm64/native/libe_sqlite3.so
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/runtimes/linux-armel/native/libe_sqlite3.so
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/runtimes/linux-mips64/native/libe_sqlite3.so
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/runtimes/linux-musl-arm/native/libe_sqlite3.so
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/runtimes/linux-musl-arm64/native/libe_sqlite3.so
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/runtimes/linux-musl-riscv64/native/libe_sqlite3.so
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/runtimes/linux-musl-s390x/native/libe_sqlite3.so
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/runtimes/linux-musl-x64/native/libe_sqlite3.so
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/runtimes/linux-ppc64le/native/libe_sqlite3.so
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/runtimes/linux-riscv64/native/libe_sqlite3.so
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/runtimes/linux-s390x/native/libe_sqlite3.so
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/runtimes/linux-x64/native/libe_sqlite3.so
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/runtimes/linux-x86/native/libe_sqlite3.so
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/runtimes/maccatalyst-arm64/native/libe_sqlite3.dylib
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/runtimes/maccatalyst-x64/native/libe_sqlite3.dylib
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/runtimes/osx-arm64/native/libe_sqlite3.dylib
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/runtimes/osx-x64/native/libe_sqlite3.dylib
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/runtimes/win-arm/native/e_sqlite3.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/runtimes/win-arm64/native/e_sqlite3.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/runtimes/win-x64/native/e_sqlite3.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/runtimes/win-x86/native/e_sqlite3.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/runtimes/win/lib/net9.0/System.Diagnostics.EventLog.Messages.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/runtimes/win/lib/net9.0/System.Diagnostics.EventLog.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/runtimes/win/lib/net9.0/System.Security.Cryptography.Pkcs.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/bin/Debug/net10.0/runtimes/win/lib/net9.0/System.Windows.Extensions.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/obj/Debug/net10.0/TaxiApp.csproj.AssemblyReference.cache
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/obj/Debug/net10.0/Avalonia/Resources.Inputs.cache
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/obj/Debug/net10.0/Avalonia/resources
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/obj/Debug/net10.0/TaxiApp.GeneratedMSBuildEditorConfig.editorconfig
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/obj/Debug/net10.0/TaxiApp.AssemblyInfoInputs.cache
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/obj/Debug/net10.0/TaxiApp.AssemblyInfo.cs
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/obj/Debug/net10.0/TaxiApp.csproj.CoreCompileInputs.cache
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/obj/Debug/net10.0/Avalonia/TaxiApp.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/obj/Debug/net10.0/Avalonia/TaxiApp.pdb
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/obj/Debug/net10.0/refint/Avalonia/TaxiApp.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/obj/Debug/net10.0/TaxiApp.csproj.Up2Date
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/obj/Debug/net10.0/TaxiApp.genruntimeconfig.cache
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject/TaxiApp/obj/Debug/net10.0/ref/TaxiApp.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/BuildHost-net472/Microsoft.Build.Locator.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/BuildHost-net472/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.exe
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/BuildHost-net472/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.exe.config
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/BuildHost-net472/Microsoft.IO.Redist.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/BuildHost-net472/Newtonsoft.Json.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/BuildHost-net472/System.Buffers.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/BuildHost-net472/System.Collections.Immutable.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/BuildHost-net472/System.CommandLine.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/BuildHost-net472/System.Memory.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/BuildHost-net472/System.Numerics.Vectors.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/BuildHost-net472/System.Runtime.CompilerServices.Unsafe.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/BuildHost-net472/System.Threading.Tasks.Extensions.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/BuildHost-net472/cs/System.CommandLine.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/BuildHost-net472/de/System.CommandLine.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/BuildHost-net472/es/System.CommandLine.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/BuildHost-net472/fr/System.CommandLine.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/BuildHost-net472/it/System.CommandLine.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/BuildHost-net472/ja/System.CommandLine.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/BuildHost-net472/ko/System.CommandLine.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/BuildHost-net472/pl/System.CommandLine.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/BuildHost-net472/pt-BR/System.CommandLine.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/BuildHost-net472/ru/System.CommandLine.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/BuildHost-net472/tr/System.CommandLine.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/BuildHost-net472/zh-Hans/System.CommandLine.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/BuildHost-net472/zh-Hant/System.CommandLine.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/BuildHost-netcore/Microsoft.Build.Locator.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/BuildHost-netcore/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.deps.json
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/BuildHost-netcore/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/BuildHost-netcore/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.dll.config
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/BuildHost-netcore/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.runtimeconfig.json
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/BuildHost-netcore/Newtonsoft.Json.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/BuildHost-netcore/System.Collections.Immutable.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/BuildHost-netcore/System.CommandLine.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/BuildHost-netcore/cs/System.CommandLine.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/BuildHost-netcore/de/System.CommandLine.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/BuildHost-netcore/es/System.CommandLine.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/BuildHost-netcore/fr/System.CommandLine.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/BuildHost-netcore/it/System.CommandLine.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/BuildHost-netcore/ja/System.CommandLine.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/BuildHost-netcore/ko/System.CommandLine.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/BuildHost-netcore/pl/System.CommandLine.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/BuildHost-netcore/pt-BR/System.CommandLine.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/BuildHost-netcore/ru/System.CommandLine.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/BuildHost-netcore/tr/System.CommandLine.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/BuildHost-netcore/zh-Hans/System.CommandLine.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/BuildHost-netcore/zh-Hant/System.CommandLine.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/TaxiApp
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/TaxiApp.deps.json
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/TaxiApp.runtimeconfig.json
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/TaxiApp.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/TaxiApp.pdb
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/Avalonia.Base.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/Avalonia.Controls.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/Avalonia.DesignerSupport.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/Avalonia.Dialogs.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/Avalonia.Markup.Xaml.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/Avalonia.Markup.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/Avalonia.Metal.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/Avalonia.MicroCom.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/Avalonia.OpenGL.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/Avalonia.Vulkan.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/Avalonia.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/Avalonia.Controls.ColorPicker.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/Avalonia.Controls.DataGrid.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/Avalonia.Desktop.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/Avalonia.Diagnostics.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/Avalonia.Fonts.Inter.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/Avalonia.FreeDesktop.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/Avalonia.Native.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/Avalonia.Remote.Protocol.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/Avalonia.Skia.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/Avalonia.Themes.Fluent.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/Avalonia.Themes.Simple.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/Avalonia.Win32.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/Avalonia.X11.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/CommunityToolkit.Mvvm.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/HarfBuzzSharp.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/Humanizer.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/MicroCom.Runtime.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/Microsoft.Build.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/Microsoft.Build.Framework.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/Microsoft.Build.Tasks.Core.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/Microsoft.Build.Utilities.Core.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/Microsoft.CodeAnalysis.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/Microsoft.CodeAnalysis.CSharp.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/Microsoft.CodeAnalysis.CSharp.Workspaces.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/Microsoft.CodeAnalysis.Workspaces.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/Microsoft.CodeAnalysis.ExternalAccess.RazorCompiler.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/Microsoft.Data.Sqlite.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/Microsoft.EntityFrameworkCore.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/Microsoft.EntityFrameworkCore.Abstractions.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/Microsoft.EntityFrameworkCore.Design.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/Microsoft.EntityFrameworkCore.Relational.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/Microsoft.EntityFrameworkCore.Sqlite.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/Microsoft.Extensions.Caching.Abstractions.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/Microsoft.Extensions.Caching.Memory.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/Microsoft.Extensions.Configuration.Abstractions.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/Microsoft.Extensions.DependencyInjection.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/Microsoft.Extensions.DependencyModel.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/Microsoft.Extensions.Logging.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/Microsoft.Extensions.Logging.Abstractions.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/Microsoft.Extensions.Options.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/Microsoft.Extensions.Primitives.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/Microsoft.NET.StringTools.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/Mono.TextTemplating.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/Newtonsoft.Json.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/SkiaSharp.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/SQLitePCLRaw.batteries_v2.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/SQLitePCLRaw.core.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/SQLitePCLRaw.provider.e_sqlite3.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/System.CodeDom.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/System.Composition.AttributedModel.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/System.Composition.Convention.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/System.Composition.Hosting.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/System.Composition.Runtime.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/System.Composition.TypedParts.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/System.Configuration.ConfigurationManager.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/System.Diagnostics.EventLog.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/System.Formats.Nrbf.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/System.Reflection.MetadataLoadContext.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/System.Resources.Extensions.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/System.Security.Cryptography.Pkcs.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/System.Security.Cryptography.ProtectedData.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/System.Security.Cryptography.Xml.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/System.Security.Permissions.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/System.Windows.Extensions.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/Tmds.DBus.Protocol.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/cs/Microsoft.CodeAnalysis.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/de/Microsoft.CodeAnalysis.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/es/Microsoft.CodeAnalysis.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/fr/Microsoft.CodeAnalysis.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/it/Microsoft.CodeAnalysis.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/ja/Microsoft.CodeAnalysis.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/ko/Microsoft.CodeAnalysis.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/pl/Microsoft.CodeAnalysis.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/pt-BR/Microsoft.CodeAnalysis.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/ru/Microsoft.CodeAnalysis.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/tr/Microsoft.CodeAnalysis.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/zh-Hans/Microsoft.CodeAnalysis.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/zh-Hant/Microsoft.CodeAnalysis.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/cs/Microsoft.CodeAnalysis.CSharp.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/de/Microsoft.CodeAnalysis.CSharp.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/es/Microsoft.CodeAnalysis.CSharp.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/fr/Microsoft.CodeAnalysis.CSharp.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/it/Microsoft.CodeAnalysis.CSharp.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/ja/Microsoft.CodeAnalysis.CSharp.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/ko/Microsoft.CodeAnalysis.CSharp.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/pl/Microsoft.CodeAnalysis.CSharp.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/pt-BR/Microsoft.CodeAnalysis.CSharp.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/ru/Microsoft.CodeAnalysis.CSharp.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/tr/Microsoft.CodeAnalysis.CSharp.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/cs/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/de/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/es/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/fr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/it/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/ja/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/ko/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/pl/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/pt-BR/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/ru/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/tr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/cs/Microsoft.CodeAnalysis.Workspaces.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/de/Microsoft.CodeAnalysis.Workspaces.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/es/Microsoft.CodeAnalysis.Workspaces.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/fr/Microsoft.CodeAnalysis.Workspaces.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/it/Microsoft.CodeAnalysis.Workspaces.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/ja/Microsoft.CodeAnalysis.Workspaces.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/ko/Microsoft.CodeAnalysis.Workspaces.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/pl/Microsoft.CodeAnalysis.Workspaces.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/pt-BR/Microsoft.CodeAnalysis.Workspaces.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/ru/Microsoft.CodeAnalysis.Workspaces.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/tr/Microsoft.CodeAnalysis.Workspaces.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/zh-Hans/Microsoft.CodeAnalysis.Workspaces.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/cs/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/de/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/es/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/fr/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/it/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/ja/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/ko/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/pl/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/pt-BR/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/ru/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/tr/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/zh-Hans/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/runtimes/win-arm64/native/av_libglesv2.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/runtimes/win-x64/native/av_libglesv2.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/runtimes/win-x86/native/av_libglesv2.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/runtimes/osx/native/libAvaloniaNative.dylib
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/runtimes/linux-arm/native/libHarfBuzzSharp.so
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/runtimes/linux-arm64/native/libHarfBuzzSharp.so
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/runtimes/linux-musl-x64/native/libHarfBuzzSharp.so
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/runtimes/linux-x64/native/libHarfBuzzSharp.so
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/runtimes/osx/native/libHarfBuzzSharp.dylib
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/runtimes/win-arm64/native/libHarfBuzzSharp.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/runtimes/win-x64/native/libHarfBuzzSharp.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/runtimes/win-x86/native/libHarfBuzzSharp.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/runtimes/linux-arm/native/libSkiaSharp.so
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/runtimes/linux-arm64/native/libSkiaSharp.so
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/runtimes/linux-musl-x64/native/libSkiaSharp.so
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/runtimes/linux-x64/native/libSkiaSharp.so
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/runtimes/osx/native/libSkiaSharp.dylib
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/runtimes/win-arm64/native/libSkiaSharp.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/runtimes/win-x64/native/libSkiaSharp.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/runtimes/win-x86/native/libSkiaSharp.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/runtimes/browser-wasm/nativeassets/net9.0/e_sqlite3.a
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/runtimes/linux-arm/native/libe_sqlite3.so
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/runtimes/linux-arm64/native/libe_sqlite3.so
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/runtimes/linux-armel/native/libe_sqlite3.so
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/runtimes/linux-mips64/native/libe_sqlite3.so
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/runtimes/linux-musl-arm/native/libe_sqlite3.so
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/runtimes/linux-musl-arm64/native/libe_sqlite3.so
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/runtimes/linux-musl-riscv64/native/libe_sqlite3.so
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/runtimes/linux-musl-s390x/native/libe_sqlite3.so
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/runtimes/linux-musl-x64/native/libe_sqlite3.so
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/runtimes/linux-ppc64le/native/libe_sqlite3.so
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/runtimes/linux-riscv64/native/libe_sqlite3.so
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/runtimes/linux-s390x/native/libe_sqlite3.so
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/runtimes/linux-x64/native/libe_sqlite3.so
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/runtimes/linux-x86/native/libe_sqlite3.so
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/runtimes/maccatalyst-arm64/native/libe_sqlite3.dylib
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/runtimes/maccatalyst-x64/native/libe_sqlite3.dylib
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/runtimes/osx-arm64/native/libe_sqlite3.dylib
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/runtimes/osx-x64/native/libe_sqlite3.dylib
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/runtimes/win-arm/native/e_sqlite3.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/runtimes/win-arm64/native/e_sqlite3.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/runtimes/win-x64/native/e_sqlite3.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/runtimes/win-x86/native/e_sqlite3.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/runtimes/win/lib/net9.0/System.Diagnostics.EventLog.Messages.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/runtimes/win/lib/net9.0/System.Diagnostics.EventLog.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/runtimes/win/lib/net9.0/System.Security.Cryptography.Pkcs.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/bin/Debug/net10.0/runtimes/win/lib/net9.0/System.Windows.Extensions.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/obj/Debug/net10.0/TaxiApp.csproj.AssemblyReference.cache
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/obj/Debug/net10.0/Avalonia/Resources.Inputs.cache
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/obj/Debug/net10.0/Avalonia/resources
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/obj/Debug/net10.0/TaxiApp.GeneratedMSBuildEditorConfig.editorconfig
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/obj/Debug/net10.0/TaxiApp.AssemblyInfoInputs.cache
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/obj/Debug/net10.0/TaxiApp.AssemblyInfo.cs
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/obj/Debug/net10.0/TaxiApp.csproj.CoreCompileInputs.cache
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/obj/Debug/net10.0/Avalonia/TaxiApp.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/obj/Debug/net10.0/Avalonia/TaxiApp.pdb
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/obj/Debug/net10.0/refint/Avalonia/TaxiApp.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/obj/Debug/net10.0/TaxiApp.csproj.Up2Date
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/obj/Debug/net10.0/TaxiApp.genruntimeconfig.cache
-/Users/sarvinozkhonyakubova/Desktop/TaxiProject copy/TaxiApp/obj/Debug/net10.0/ref/TaxiApp.dll
+/Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/obj/Debug/net10.0/TaxiApp.csproj.AssemblyReference.cache
+/Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/obj/Debug/net10.0/Avalonia/Resources.Inputs.cache
+/Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/obj/Debug/net10.0/Avalonia/resources
+/Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/obj/Debug/net10.0/TaxiApp.GeneratedMSBuildEditorConfig.editorconfig
+/Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/obj/Debug/net10.0/TaxiApp.AssemblyInfoInputs.cache
+/Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/obj/Debug/net10.0/TaxiApp.AssemblyInfo.cs
+/Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/obj/Debug/net10.0/TaxiApp.csproj.CoreCompileInputs.cache
+/Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/obj/Debug/net10.0/TaxiApp.sourcelink.json
+/Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/obj/Debug/net10.0/TaxiApp.dll
+/Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/obj/Debug/net10.0/refint/TaxiApp.dll
+/Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/obj/Debug/net10.0/TaxiApp.pdb
 /Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/BuildHost-net472/Microsoft.Build.Locator.dll
 /Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/BuildHost-net472/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.exe
 /Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/BuildHost-net472/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.exe.config
@@ -574,14 +77,18 @@
 /Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/Avalonia.Diagnostics.dll
 /Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/Avalonia.Fonts.Inter.dll
 /Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/Avalonia.FreeDesktop.dll
+/Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/Avalonia.FreeDesktop.AtSpi.dll
+/Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/Avalonia.HarfBuzz.dll
 /Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/Avalonia.Native.dll
 /Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/Avalonia.Remote.Protocol.dll
 /Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/Avalonia.Skia.dll
 /Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/Avalonia.Themes.Fluent.dll
 /Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/Avalonia.Themes.Simple.dll
+/Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/Avalonia.Win32.Automation.dll
 /Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/Avalonia.Win32.dll
 /Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/Avalonia.X11.dll
 /Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/CommunityToolkit.Mvvm.dll
+/Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/DynamicData.dll
 /Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/HarfBuzzSharp.dll
 /Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/Humanizer.dll
 /Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/MicroCom.Runtime.dll
@@ -614,7 +121,13 @@
 /Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/Microsoft.NET.StringTools.dll
 /Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/Mono.TextTemplating.dll
 /Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/Newtonsoft.Json.dll
+/Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/ReactiveUI.dll
+/Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/ReactiveUI.Avalonia.dll
 /Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/SkiaSharp.dll
+/Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/Splat.dll
+/Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/Splat.Builder.dll
+/Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/Splat.Core.dll
+/Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/Splat.Logging.dll
 /Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/SQLitePCLRaw.batteries_v2.dll
 /Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/SQLitePCLRaw.core.dll
 /Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/SQLitePCLRaw.provider.e_sqlite3.dll
@@ -627,6 +140,7 @@
 /Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/System.Configuration.ConfigurationManager.dll
 /Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/System.Diagnostics.EventLog.dll
 /Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/System.Formats.Nrbf.dll
+/Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/System.Reactive.dll
 /Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/System.Reflection.MetadataLoadContext.dll
 /Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/System.Resources.Extensions.dll
 /Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/System.Security.Cryptography.Pkcs.dll
@@ -706,20 +220,40 @@
 /Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/runtimes/osx/native/libAvaloniaNative.dylib
 /Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/runtimes/linux-arm/native/libHarfBuzzSharp.so
 /Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/runtimes/linux-arm64/native/libHarfBuzzSharp.so
+/Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/runtimes/linux-loongarch64/native/libHarfBuzzSharp.so
+/Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/runtimes/linux-musl-arm/native/libHarfBuzzSharp.so
+/Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/runtimes/linux-musl-arm64/native/libHarfBuzzSharp.so
+/Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/runtimes/linux-musl-loongarch64/native/libHarfBuzzSharp.so
+/Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/runtimes/linux-musl-riscv64/native/libHarfBuzzSharp.so
 /Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/runtimes/linux-musl-x64/native/libHarfBuzzSharp.so
+/Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/runtimes/linux-riscv64/native/libHarfBuzzSharp.so
 /Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/runtimes/linux-x64/native/libHarfBuzzSharp.so
+/Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/runtimes/linux-x86/native/libHarfBuzzSharp.so
 /Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/runtimes/osx/native/libHarfBuzzSharp.dylib
 /Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/runtimes/win-arm64/native/libHarfBuzzSharp.dll
+/Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/runtimes/win-arm64/native/libHarfBuzzSharp.pdb
 /Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/runtimes/win-x64/native/libHarfBuzzSharp.dll
+/Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/runtimes/win-x64/native/libHarfBuzzSharp.pdb
 /Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/runtimes/win-x86/native/libHarfBuzzSharp.dll
+/Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/runtimes/win-x86/native/libHarfBuzzSharp.pdb
 /Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/runtimes/linux-arm/native/libSkiaSharp.so
 /Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/runtimes/linux-arm64/native/libSkiaSharp.so
+/Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/runtimes/linux-loongarch64/native/libSkiaSharp.so
+/Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/runtimes/linux-musl-arm/native/libSkiaSharp.so
+/Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/runtimes/linux-musl-arm64/native/libSkiaSharp.so
+/Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/runtimes/linux-musl-loongarch64/native/libSkiaSharp.so
+/Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/runtimes/linux-musl-riscv64/native/libSkiaSharp.so
 /Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/runtimes/linux-musl-x64/native/libSkiaSharp.so
+/Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/runtimes/linux-riscv64/native/libSkiaSharp.so
 /Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/runtimes/linux-x64/native/libSkiaSharp.so
+/Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/runtimes/linux-x86/native/libSkiaSharp.so
 /Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/runtimes/osx/native/libSkiaSharp.dylib
 /Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/runtimes/win-arm64/native/libSkiaSharp.dll
+/Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/runtimes/win-arm64/native/libSkiaSharp.pdb
 /Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/runtimes/win-x64/native/libSkiaSharp.dll
+/Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/runtimes/win-x64/native/libSkiaSharp.pdb
 /Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/runtimes/win-x86/native/libSkiaSharp.dll
+/Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/runtimes/win-x86/native/libSkiaSharp.pdb
 /Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/runtimes/browser-wasm/nativeassets/net9.0/e_sqlite3.a
 /Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/runtimes/linux-arm/native/libe_sqlite3.so
 /Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/runtimes/linux-arm64/native/libe_sqlite3.so
@@ -747,16 +281,6 @@
 /Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/runtimes/win/lib/net9.0/System.Diagnostics.EventLog.dll
 /Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/runtimes/win/lib/net9.0/System.Security.Cryptography.Pkcs.dll
 /Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/bin/Debug/net10.0/runtimes/win/lib/net9.0/System.Windows.Extensions.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/obj/Debug/net10.0/TaxiApp.csproj.AssemblyReference.cache
-/Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/obj/Debug/net10.0/Avalonia/Resources.Inputs.cache
-/Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/obj/Debug/net10.0/Avalonia/resources
-/Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/obj/Debug/net10.0/TaxiApp.GeneratedMSBuildEditorConfig.editorconfig
-/Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/obj/Debug/net10.0/TaxiApp.AssemblyInfoInputs.cache
-/Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/obj/Debug/net10.0/TaxiApp.AssemblyInfo.cs
-/Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/obj/Debug/net10.0/TaxiApp.csproj.CoreCompileInputs.cache
-/Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/obj/Debug/net10.0/Avalonia/TaxiApp.dll
-/Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/obj/Debug/net10.0/Avalonia/TaxiApp.pdb
-/Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/obj/Debug/net10.0/refint/Avalonia/TaxiApp.dll
 /Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/obj/Debug/net10.0/TaxiApp.csproj.Up2Date
 /Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/obj/Debug/net10.0/TaxiApp.genruntimeconfig.cache
 /Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/obj/Debug/net10.0/ref/TaxiApp.dll

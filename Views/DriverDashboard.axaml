@@ -1,0 +1,37 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="TaxiApp.Views.DriverDashboard"
+        Title="Haydovchi Dashboard"
+        Width="1000"
+        Height="700"
+        Background="#F5F5F5">
+
+    <Grid ColumnDefinitions="240,*" RowDefinitions="*">
+        
+        <!-- SIDEBAR -->
+        <StackPanel Grid.Column="0" Background="#1E293B">
+            <Border Background="#0F172A" Padding="28">
+                <StackPanel Spacing="10">
+                    <TextBlock Text="🚕" FontSize="36" HorizontalAlignment="Center"/>
+                    <TextBlock Text="TaxiPro" FontSize="18" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center"/>
+                    <TextBlock Text="Boshqaruv Tizimi" FontSize="12" Foreground="#94A3B8" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Border>
+<Button Name="ProfilBtn" Content="👤 Profilim" Background="#334155" Foreground="White" Height="50" Margin="0,0,0,6" FontSize="14" FontWeight="Medium" CornerRadius="10" Padding="20,0" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Click="Profil_Click"/>
+            <Button Name="DashboardBtn" Content="📊 Dashboard" Background="#64748B" Foreground="White" Height="50" Margin="0,0,0,6" FontSize="14" FontWeight="Medium" CornerRadius="10" Padding="20,0" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Click="Dashboard_Click"/>
+            <Button Name="YolovchilarBtn" Content="🚕 Yo'lovchilar" Background="#64748B" Foreground="White" Height="50" Margin="0,0,0,6" FontSize="14" FontWeight="Medium" CornerRadius="10" Padding="20,0" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Click="Yolovchilar_Click"/>
+            <Button Name="DaromadBtn" Content="💰 Daromad" Background="#64748B" Foreground="White" Height="50" Margin="0,0,0,6" FontSize="14" FontWeight="Medium" CornerRadius="10" Padding="20,0" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Click="Daromad_Click"/>
+            <Button Name="SharhlarBtn" Content="⭐ Sharhlar" Background="#64748B" Foreground="White" Height="50" Margin="0,0,0,6" FontSize="14" FontWeight="Medium" CornerRadius="10" Padding="20,0" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Click="Sharhlar_Click"/>
+            <Button Name="PulYechishBtn" Content="💸 Pul Yechish" Background="#64748B" Foreground="White" Height="50" Margin="0,0,0,6" FontSize="14" FontWeight="Medium" CornerRadius="10" Padding="20,0" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Click="PulYechish_Click"/>
+            
+           <Border Height="60"/>            
+            <Button Name="TungiBtn" Content="🌙 Tungi Rejim" Background="#64748B" Foreground="White" Height="50" Margin="0,0,0,6" FontSize="14" FontWeight="Medium" CornerRadius="10" Padding="20,0" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Click="TungiRejim_Click"/>
+            <Button Name="ChiqishBtn" Content="🚪 Chiqish" Background="#DC2626" Foreground="White" Height="50" Margin="0,0,0,6" FontSize="14" FontWeight="Medium" CornerRadius="10" Padding="20,0" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Click="Chiqish_Click"/>
+
+            <TextBlock Text="© yaksar" Foreground="#64748B" FontSize="11" HorizontalAlignment="Center" Margin="0,90,0,12"/>
+        </StackPanel>
+
+        <!-- MAIN CONTENT -->
+        <ContentControl Name="MainContent" Grid.Column="1" Margin="20"/>
+    </Grid>
+</Window>

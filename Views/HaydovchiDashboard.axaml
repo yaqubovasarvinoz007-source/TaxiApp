@@ -9,32 +9,32 @@
     <StackPanel Margin="20" Spacing="15">
         <TextBlock Text="Haydovchi Dashboard" FontSize="28" FontWeight="Bold" Foreground="#333"/>
 
-        <Grid ColumnDefinitions="*,*,*,*" RowDefinitions="Auto" Spacing="10">
+        <Grid ColumnDefinitions="*,*,*,*" RowDefinitions="Auto">
             <Border Grid.Column="0" Background="White" CornerRadius="8" Padding="15">
                 <StackPanel>
                     <TextBlock Text="Bugungi Daromad" Foreground="#666" FontSize="12"/>
-                    <TextBlock Text="{Binding BugunDaromad, StringFormat='{0:C}'}" FontSize="24" FontWeight="Bold" Foreground="#4CAF50"/>
+                    <TextBlock Text="{Binding BugunDaromad}" FontSize="24" FontWeight="Bold" Foreground="#4CAF50"/>
                 </StackPanel>
             </Border>
 
             <Border Grid.Column="1" Background="White" CornerRadius="8" Padding="15">
                 <StackPanel>
                     <TextBlock Text="Jami Daromad" Foreground="#666" FontSize="12"/>
-                    <TextBlock Text="{Binding JamiDaromad, StringFormat='{0:C}'}" FontSize="24" FontWeight="Bold" Foreground="#2196F3"/>
+                    <TextBlock Text="{Binding JamiDaromad}" FontSize="24" FontWeight="Bold" Foreground="#2196F3"/>
                 </StackPanel>
             </Border>
 
             <Border Grid.Column="2" Background="White" CornerRadius="8" Padding="15">
                 <StackPanel>
                     <TextBlock Text="Hisobdagi Pul" Foreground="#666" FontSize="12"/>
-                    <TextBlock Text="{Binding HisobdagiPul, StringFormat='{0:C}'}" FontSize="24" FontWeight="Bold" Foreground="#FF9800"/>
+                    <TextBlock Text="{Binding HisobdagiPul}" FontSize="24" FontWeight="Bold" Foreground="#FF9800"/>
                 </StackPanel>
             </Border>
 
             <Border Grid.Column="3" Background="White" CornerRadius="8" Padding="15">
                 <StackPanel>
                     <TextBlock Text="Reyting" Foreground="#666" FontSize="12"/>
-                    <TextBlock Text="{Binding Reyting, StringFormat='{0:0.0} ⭐'}" FontSize="24" FontWeight="Bold" Foreground="#F44336"/>
+                    <TextBlock Text="{Binding Reyting}" FontSize="24" FontWeight="Bold" Foreground="#F44336"/>
                 </StackPanel>
             </Border>
         </Grid>

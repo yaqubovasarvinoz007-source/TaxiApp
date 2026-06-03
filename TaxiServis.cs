@@ -141,16 +141,29 @@ namespace TaxiApp
         // ─────────────────────────────────────────────
 
         public List<Buyurtma> BarchaBuyurtmalarniOlish()
-        {
-            using var db = new TaxiDbContext();
-            return db.Buyurtmalar
-                .Include(b => b.Mijoz)
-                .Include(b => b.Haydovchi)
-                .AsNoTracking()
-                .OrderByDescending(b => b.Sana)
-                .ToList();
-        }
+{
+    using var db = new TaxiDbContext();
 
+    return db.Buyurtmalar
+        .Include(b => b.Mijoz)
+        .Include(b => b.Haydovchi)
+        .AsNoTracking()
+        .OrderByDescending(b => b.Sana)
+        .ToList();
+}
+           
+public List<Buyurtma> BarchaYakunlanganBuyurtmalarniOlish()
+{
+    using var db = new TaxiDbContext();
+
+    return db.Buyurtmalar
+        .Where(b => b.Holat == "Yakunlangan")
+        .Include(b => b.Mijoz)
+        .Include(b => b.Haydovchi)
+        .AsNoTracking()
+        .OrderByDescending(b => b.Sana)
+        .ToList();
+}
         public void BuyurtmaYaratish(int mijozId, int haydovchiId,
             string qayerdan, string qayerga, decimal narx)
         {
@@ -182,14 +195,43 @@ namespace TaxiApp
             db.SaveChanges();
         }
 
-        public void BuyurtmaOchirish(int id)
+      public void BuyurtmaYakunlash(int id)
+{
+    using var db = new TaxiDbContext();
+
+    var b = db.Buyurtmalar.Find(id);
+    if (b == null) return;
+
+    // Haydovchini topish
+    var haydovchi = db.Haydovchilar.Find(b.HaydovchiId);
+    if (haydovchi != null)
+    {
+        haydovchi.Holati = "Bo'sh";
+    }
+
+    // Daromadni qo'shish
+    var daromad = db.HaydovchiDaromadilar
+        .FirstOrDefault(x => x.HaydovchiId == b.HaydovchiId);
+
+    if (daromad == null)
+    {
+        daromad = new HaydovchiDaromadi
         {
-            using var db = new TaxiDbContext();
-            var b = db.Buyurtmalar.Find(id);
-            if (b == null) return;
-            db.Buyurtmalar.Remove(b);
-            db.SaveChanges();
-        }
+            HaydovchiId = b.HaydovchiId
+        };
+
+        db.HaydovchiDaromadilar.Add(daromad);
+    }
+
+    daromad.BugunDaromad += b.Narx;
+    daromad.JamiDaromad += b.Narx;
+    daromad.HisobdagiPul += b.Narx;
+    daromad.YolovchiSoni += 1;
+    daromad.OxirigiYangilandi = DateTime.Now;
+
+    b.Holat = "Yakunlangan";
+    db.SaveChanges();
+}
 
         // ─────────────────────────────────────────────
         // STATISTIKA
@@ -252,5 +294,161 @@ namespace TaxiApp
             using var db = new TaxiDbContext();
             return db.Buyurtmalar.Count();
         }
+        public decimal JamiHaydovchilarDaromadi()
+{
+    using var db = new TaxiDbContext();
+
+    return db.HaydovchiDaromadilar
+        .Sum(x => (decimal?)x.JamiDaromad) ?? 0m;
+}
+
+public decimal BugungiHaydovchilarDaromadi()
+{
+    using var db = new TaxiDbContext();
+
+    return db.HaydovchiDaromadilar
+        .Sum(x => (decimal?)x.BugunDaromad) ?? 0m;
+}
+public List<string> TopHaydovchilar(int soni = 5)
+{
+    using var db = new TaxiDbContext();
+
+    return db.HaydovchiDaromadilar
+        .Include(x => x.Haydovchi)
+        .OrderByDescending(x => x.JamiDaromad)
+        .Take(soni)
+        .Select(x =>
+            $"{x.Haydovchi!.Ismi} - {x.JamiDaromad:N0} so'm")
+        .ToList();
+}
+public HaydovchiDaromadi? HaydovchiDaromadiniOlish(int haydovchiId)
+{
+    using var db = new TaxiDbContext();
+
+    return db.HaydovchiDaromadilar
+        .AsNoTracking()
+        .FirstOrDefault(x => x.HaydovchiId == haydovchiId);
+}
+public List<Buyurtma> HaydovchiBuyurtmalariniOlish(int haydovchiId)
+{
+    using var db = new TaxiDbContext();
+
+    return db.Buyurtmalar
+        .Where(b => b.HaydovchiId == haydovchiId)
+        .OrderByDescending(b => b.Sana)
+        .ToList();
+}
+public bool PulYechishSoroviYubor(int haydovchiId, decimal summa)
+{
+    using var db = new TaxiDbContext();
+
+    var daromad = db.HaydovchiDaromadilar
+        .FirstOrDefault(x => x.HaydovchiId == haydovchiId);
+
+    if (daromad == null)
+        return false;
+
+    if (summa <= 0)
+        return false;
+
+    if (daromad.HisobdagiPul < summa)
+        return false;
+
+    db.PulYechishlari.Add(new PulYechish
+    {
+        HaydovchiId = haydovchiId,
+        Summa = summa,
+        Holati = "Kutilmoqda",
+        YechishSana = DateTime.Now
+    });
+
+    db.SaveChanges();
+    return true;
+}
+public List<PulYechish> BarchaPulYechishlarniOlish()
+{
+    using var db = new TaxiDbContext();
+
+    return db.PulYechishlari
+        .OrderByDescending(x => x.YechishSana)
+        .ToList();
+}
+
+public bool PulYechishniTasdiqlash(int id)
+{
+    using var db = new TaxiDbContext();
+
+    var p = db.PulYechishlari.Find(id);
+    if (p == null || p.Holati != "Kutilmoqda")
+        return false;
+
+    var daromad = db.HaydovchiDaromadilar
+        .FirstOrDefault(x => x.HaydovchiId == p.HaydovchiId);
+
+    if (daromad == null || daromad.HisobdagiPul < p.Summa)
+        return false;
+
+    daromad.HisobdagiPul -= p.Summa;
+
+    p.Holati = "Tasdiqlandi";
+    p.TasdiqlanganSana = DateTime.Now;
+
+    db.SaveChanges();
+    return true;
+}
+
+public bool PulYechishniRadEtish(int id)
+{
+    using var db = new TaxiDbContext();
+
+    var p = db.PulYechishlari.Find(id);
+    if (p == null || p.Holati != "Kutilmoqda")
+        return false;
+
+    p.Holati = "Rad etildi";
+    p.TasdiqlanganSana = DateTime.Now;
+
+    db.SaveChanges();
+    return true;
+}
+public void SharhQoshish(int haydovchiId, int mijozId, int reyting, string sharh)
+{
+    using var db = new TaxiDbContext();
+
+    db.MijozSharhlari.Add(new MijozSharhı
+    {
+        HaydovchiId = haydovchiId,
+        MijozId = mijozId,
+        Reyting = reyting,
+        Sharh = sharh,
+        Sana = DateTime.Now
+    });
+
+    db.SaveChanges();
+}
+
+public List<MijozSharhı> HaydovchiSharhlariniOlish(int haydovchiId)
+{
+    using var db = new TaxiDbContext();
+
+    return db.MijozSharhlari
+        .Where(x => x.HaydovchiId == haydovchiId)
+        .OrderByDescending(x => x.Sana)
+        .ToList();
+}
+
+public double HaydovchiOrtachaReytingi(int haydovchiId)
+{
+    using var db = new TaxiDbContext();
+
+    var sharhlar = db.MijozSharhlari
+        .Where(x => x.HaydovchiId == haydovchiId)
+        .ToList();
+
+    if (sharhlar.Count == 0)
+        return 0;
+
+    return sharhlar.Average(x => x.Reyting);
+}
     }
 }

@@ -5,11 +5,11 @@ using TaxiApp.Models;
 
 namespace TaxiApp.ViewModels
 {
-    public class MijozSharhlariViewModel : ViewModelBase
+    public class MijozSharhlariViewModel : ReactiveObject
     {
         private ObservableCollection<MijozSharhı> _sharhlari;
         private double _ortaReyting;
-        private int _jami Sharh;
+        private int _jamiSharh;
 
         public ObservableCollection<MijozSharhı> Sharhlari
         {
@@ -25,8 +25,8 @@ namespace TaxiApp.ViewModels
 
         public int JamiSharh
         {
-            get => _jami Sharh;
-            set => this.RaiseAndSetIfChanged(ref _jami Sharh, value);
+            get => _jamiSharh;
+            set => this.RaiseAndSetIfChanged(ref _jamiSharh, value);
         }
 
         public MijozSharhlariViewModel()

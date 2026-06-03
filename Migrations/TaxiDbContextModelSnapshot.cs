@@ -26,6 +26,9 @@ namespace TaxiApp.Migrations
                     b.Property<int>("HaydovchiId")
                         .HasColumnType("INTEGER");
 
+                    b.Property<string>("Holat")
+                        .HasColumnType("TEXT");
+
                     b.Property<int>("MijozId")
                         .HasColumnType("INTEGER");
 

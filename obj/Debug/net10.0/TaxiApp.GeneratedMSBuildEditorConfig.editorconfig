@@ -39,8 +39,20 @@ build_property.EnableCodeStyleSeverity =
 [/Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[/Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/Views/DriverDashboard.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/Views/HaydovchiDashboard.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [/Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/Views/LoginWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [/Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/Views/MainWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/Views/MijozSharhları.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/Users/sarvinozkhonyakubova/Desktop/TaxiProjectDone/TaxiApp/Views/PulYechish.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

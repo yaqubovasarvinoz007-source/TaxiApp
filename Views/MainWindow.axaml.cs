@@ -17,10 +17,12 @@ namespace TaxiApp.Views
         private readonly ObservableCollection<Haydovchi> _haydovchilar = new();
         private readonly ObservableCollection<Mijoz> _mijozlar = new();
         private readonly ObservableCollection<BuyurtmaView> _buyurtmalar = new();
+        private readonly ObservableCollection<TaxiApp.Models.PulYechish> _pulYechishlar = new();
         private Grid panelStatistika = null!;
         private Grid panelHaydovchilar = null!;
         private Grid panelMijozlar = null!;
         private Grid panelBuyurtmalar = null!;
+        private Grid panelPulYechishlar = null!;
         private TextBox txtHIsm = null!;
         private TextBox txtHPlate = null!;
         private Button btnHSaqlash = null!;
@@ -37,6 +39,7 @@ namespace TaxiApp.Views
         private TextBox txtQayerga = null!;
         private TextBox txtNarx = null!;
         private DataGrid dgBuyurtmalar = null!;
+        private DataGrid dgPulYechishlar = null!;
         private TextBlock lblTushum = null!;
         private TextBlock lblJamiTushum = null!;
         private TextBlock lblFaolH = null!;
@@ -46,6 +49,8 @@ namespace TaxiApp.Views
         private TextBlock lblJamiM = null!;
         private TextBlock lblJamiB = null!;
         private TextBlock lblXabar = null!;
+        private Button btnTasdiqlash = null!;
+        private Button btnRadEtish = null!;
         private bool isDarkMode = false;
 
         public MainWindow()
@@ -124,16 +129,38 @@ namespace TaxiApp.Views
             nav.Children.Add(NavBtn("🚗  Haydovchilar", () => PanelKo_rsat(panelHaydovchilar)));
             nav.Children.Add(NavBtn("👥  Mijozlar",     () => PanelKo_rsat(panelMijozlar)));
             nav.Children.Add(NavBtn("📋  Buyurtmalar",  () => PanelKo_rsat(panelBuyurtmalar)));
+            nav.Children.Add(NavBtn("💸  Pul Yechishlar", () => PanelKo_rsat(panelPulYechishlar)));
             nav.Children.Add(new Border { Height = 20 });
             var btnTheme = new Button {
                 Content = "🌙 Tungi Rejim",
                 HorizontalAlignment = HorizontalAlignment.Stretch,
                 HorizontalContentAlignment = HorizontalAlignment.Left,
-                Padding = new Thickness(14,11), Background = Brushes.Transparent,
+                VerticalContentAlignment = VerticalAlignment.Center,
+                Padding = new Thickness(14,11), Background = Brush.Parse("#334155"),
                 Foreground = Brush.Parse("#94A3B8"), FontSize = 14, CornerRadius = new CornerRadius(8)
             };
             btnTheme.Click += (_, _) => ToggleDarkMode(root);
             nav.Children.Add(btnTheme);
+
+            var btnLogout = new Button {
+                Content = "🚪 Chiqish",
+                HorizontalAlignment = HorizontalAlignment.Stretch,
+                HorizontalContentAlignment = HorizontalAlignment.Left,
+                VerticalContentAlignment = VerticalAlignment.Center,
+                Padding = new Thickness(14,11),
+                Foreground = Brushes.White,
+                FontSize = 14,
+                Background = Brush.Parse("#DC2626"),
+                CornerRadius = new CornerRadius(8)
+            };
+
+            btnLogout.Click += (_, _) => {
+                new LoginWindow().Show();
+                Close();
+            };
+
+            nav.Children.Add(btnLogout);
+
             sidebar.Children.Add(nav);
             Grid.SetColumn(sidebar, 0);
             root.Children.Add(sidebar);
@@ -147,10 +174,12 @@ namespace TaxiApp.Views
             panelHaydovchilar = HPanel();
             panelMijozlar     = MPanel();
             panelBuyurtmalar  = BPanel();
+            panelPulYechishlar = PPanel();
             content.Children.Add(panelStatistika);
             content.Children.Add(panelHaydovchilar);
             content.Children.Add(panelMijozlar);
             content.Children.Add(panelBuyurtmalar);
+            content.Children.Add(panelPulYechishlar);
             Grid.SetRow(content, 1); main.Children.Add(content);
             Grid.SetColumn(main, 1); root.Children.Add(main);
             Content = root;
@@ -175,6 +204,76 @@ namespace TaxiApp.Views
             Grid.SetRow(wrap, 1); p.Children.Add(wrap);
             return p;
         }
+        private Grid PPanel()
+        {
+            var p = new Grid { IsVisible = false };
+
+            p.RowDefinitions.Add(new RowDefinition(GridLength.Auto));
+            p.RowDefinitions.Add(new RowDefinition(GridLength.Auto));
+            p.RowDefinitions.Add(new RowDefinition(GridLength.Star));
+
+            var title = Sarlavha("💸 Pul Yechish So'rovlari");
+            Grid.SetRow(title, 0);
+            p.Children.Add(title);
+
+            var topBar = new StackPanel
+            {
+                Orientation = Orientation.Horizontal,
+                Spacing = 10,
+                Margin = new Thickness(0,0,0,10)
+            };
+
+            var btnYangila = Btn("🔄 Yangilash", "#2563EB");
+            btnTasdiqlash = Btn("✅ Tasdiqlash", "#16A34A");
+            btnRadEtish = Btn("❌ Rad Etish", "#DC2626");
+
+            btnYangila.Click += (_, _) => YangilaHamma();
+
+            topBar.Children.Add(btnYangila);
+            topBar.Children.Add(btnTasdiqlash);
+            topBar.Children.Add(btnRadEtish);
+
+            Grid.SetRow(topBar, 1);
+            p.Children.Add(topBar);
+
+            dgPulYechishlar = Jadval();
+            dgPulYechishlar.ItemsSource = _pulYechishlar;
+
+            dgPulYechishlar.Columns.Add(Ustun("ID", "Id", 70));
+            dgPulYechishlar.Columns.Add(Ustun("Haydovchi", "HaydovchiId", 120));
+            dgPulYechishlar.Columns.Add(Ustun("Summa", "Summa", 150));
+            dgPulYechishlar.Columns.Add(Ustun("Holat", "Holati", 150));
+
+            btnTasdiqlash.Click += (_, _) =>
+            {
+                if (dgPulYechishlar.SelectedItem is TaxiApp.Models.PulYechish py)
+                {
+                    if (_servis.PulYechishniTasdiqlash(py.Id))
+                    {
+                        YangilaHamma();
+                        Xabar("So'rov tasdiqlandi", true);
+                    }
+                }
+            };
+
+            btnRadEtish.Click += (_, _) =>
+            {
+                if (dgPulYechishlar.SelectedItem is TaxiApp.Models.PulYechish py)
+                {
+                    if (_servis.PulYechishniRadEtish(py.Id))
+                    {
+                        YangilaHamma();
+                        Xabar("So'rov rad etildi", true);
+                    }
+                }
+            };
+
+            Grid.SetRow(dgPulYechishlar, 2);
+            p.Children.Add(dgPulYechishlar);
+
+            return p;
+        }
+
 
         private Grid HPanel()
         {
@@ -276,7 +375,7 @@ namespace TaxiApp.Views
         private Grid BPanel()
         {
             var p = new Grid { IsVisible = false };
-            p.ColumnDefinitions.Add(new ColumnDefinition(GridLength.Parse("330")));
+            p.ColumnDefinitions.Add(new ColumnDefinition(GridLength.Parse("260")));
             p.ColumnDefinitions.Add(new ColumnDefinition(GridLength.Star));
             var forma = new Border {
                 Background = Brushes.White, CornerRadius = new CornerRadius(12),
@@ -284,7 +383,7 @@ namespace TaxiApp.Views
                 BorderBrush = Brush.Parse("#E2E8F0"), BorderThickness = new Thickness(1)
             };
             var fi = new StackPanel { Spacing = 12 };
-            fi.Children.Add(new TextBlock { Text = "📋 Yangi Buyurtma", FontSize = 16, FontWeight = FontWeight.SemiBold, Margin = new Thickness(0,0,0,4) });
+            fi.Children.Add(new TextBlock { Text = "📋 Yangi Buyurtma", FontSize = 14, FontWeight = FontWeight.Medium, Margin = new Thickness(0,0,0,4) });
             cbMijoz     = new ComboBox { PlaceholderText = "👤 Mijozni tanlang...", HorizontalAlignment = HorizontalAlignment.Stretch };
             cbHaydovchi = new ComboBox { PlaceholderText = "🚗 Bosh haydovchi...", HorizontalAlignment = HorizontalAlignment.Stretch };
             txtQayerdan = new TextBox  { Watermark = "📍 Qayerdan?",               HorizontalAlignment = HorizontalAlignment.Stretch };
@@ -293,7 +392,7 @@ namespace TaxiApp.Views
             var btnTasdiq = new Button {
                 Content = "🚕 Buyurtmani Tasdiqlash", Background = Brush.Parse("#2563EB"), Foreground = Brushes.White,
                 HorizontalAlignment = HorizontalAlignment.Stretch, HorizontalContentAlignment = HorizontalAlignment.Center,
-                Padding = new Thickness(0,12), FontWeight = FontWeight.SemiBold, FontSize = 14, CornerRadius = new CornerRadius(8)
+                Padding = new Thickness(0,12), FontWeight = FontWeight.Medium, FontSize = 14, CornerRadius = new CornerRadius(8)
             };
             btnTasdiq.Click += BtnBuyurtma_Tasdiq;
             fi.Children.Add(cbMijoz); fi.Children.Add(cbHaydovchi);
@@ -304,10 +403,10 @@ namespace TaxiApp.Views
             var right = new Grid();
             right.RowDefinitions.Add(new RowDefinition(GridLength.Auto));
             right.RowDefinitions.Add(new RowDefinition(GridLength.Star));
-            var btnBuyOchir = Btn("🗑 Ochirish", "#DC2626");
+            var btnBuyOchir = Btn("✅ Yakunlash", "#DC2626");
             btnBuyOchir.Click += (_, _) => {
                 if (dgBuyurtmalar.SelectedItem is BuyurtmaView bv) {
-                    _servis.BuyurtmaOchirish(bv.Id); YangilaHamma(); Xabar("Buyurtma ochirildi.", true);
+                    _servis.BuyurtmaYakunlash(bv.Id); YangilaHamma(); Xabar("Buyurtma ochirildi.", true);
                 } else { Xabar("Avval buyurtmani tanlang!", false); }
             };
             var topBar = new StackPanel { Orientation = Orientation.Horizontal, Margin = new Thickness(0,0,0,10) };
@@ -318,11 +417,12 @@ namespace TaxiApp.Views
             dgBuyurtmalar = Jadval();
             dgBuyurtmalar.ItemsSource = _buyurtmalar;
             dgBuyurtmalar.Columns.Add(Ustun("N",         "Id",            60));
-            dgBuyurtmalar.Columns.Add(Ustun("Mijoz",     "MijozIsmi",    150));
-            dgBuyurtmalar.Columns.Add(Ustun("Haydovchi", "HaydovchiIsmi",150));
-            dgBuyurtmalar.Columns.Add(Ustun("Yonalish",  "Yonalish",     200));
+            dgBuyurtmalar.Columns.Add(Ustun("Mijoz", "MijozIsmi", 110));
+            dgBuyurtmalar.Columns.Add(Ustun("Haydovchi", "HaydovchiIsmi", 110));
+            dgBuyurtmalar.Columns.Add(Ustun("Yonalish", "Yonalish", 140));
             dgBuyurtmalar.Columns.Add(Ustun("Narx",      "NarxMatn",     110));
-            dgBuyurtmalar.Columns.Add(Ustun("Sana",      "SanaMatn",     140));
+            dgBuyurtmalar.Columns.Add(Ustun("Sana", "SanaMatn", 120));
+            dgBuyurtmalar.Columns.Add(Ustun("Holat", "Holat", 100));
             Grid.SetRow(dgBuyurtmalar, 1); right.Children.Add(dgBuyurtmalar);
             Grid.SetColumn(right, 1); p.Children.Add(right);
             return p;
@@ -375,7 +475,7 @@ namespace TaxiApp.Views
             var haydovchilar = _servis.BarchaHaydovchilarniOlish();
             _haydovchilar.Clear();
             foreach (var h in haydovchilar) {
-                h.Holati = h.Holati == "Bosh" ? "🟢 Bosh" : "🔴 Band";
+               h.Holati = h.Holati == "Bo'sh" ? "🟢 Bo'sh" : "🔴 Band";
                 _haydovchilar.Add(h);
             }
             var mijozlar = _servis.BarchaMijozlarniOlish();
@@ -387,14 +487,21 @@ namespace TaxiApp.Views
                 _buyurtmalar.Add(new BuyurtmaView {
                     Id = b.Id, MijozIsmi = b.Mijoz?.Ismi ?? "—", HaydovchiIsmi = b.Haydovchi?.Ismi ?? "—",
                     Yonalish = $"{b.Qayerdan} → {b.Qayerga}", NarxMatn = $"{b.Narx:N0} som",
-                    SanaMatn = b.Sana.ToString("dd.MM.yyyy HH:mm")
+                    SanaMatn = b.Sana.ToString("dd.MM.yyyy HH:mm"),
+                    Holat = b.Holat == "Yakunlangan"
+                        ? "✅ Yakun"
+                        : "🟢 Aktiv"
                 });
+            _pulYechishlar.Clear();
+            foreach (var py in _servis.BarchaPulYechishlarniOlish())
+                _pulYechishlar.Add(py);
+
             var boshlar = _servis.BoshHaydovchilarniOlish();
             cbMijoz.ItemsSource     = mijozlar.Select(m => m.Ismi).ToList();
             cbHaydovchi.ItemsSource = boshlar.Select(h => $"{h.Ismi} ({h.MashinaRaqami})").ToList();
-            lblTushum.Text     = $"{_servis.KunlikTushum():N0} som";
-            lblJamiTushum.Text = $"{_servis.JamiTushum():N0} som";
-            lblFaolH.Text      = _servis.EngFaolHaydovchi();
+            lblTushum.Text     = $"{_servis.BugungiHaydovchilarDaromadi():N0} som";
+            lblJamiTushum.Text = $"{_servis.JamiHaydovchilarDaromadi():N0} som";
+            lblFaolH.Text      = _servis.TopHaydovchilar(1).FirstOrDefault() ?? "Ma'lumot yoq";
             lblFaolM.Text      = _servis.EngFaolMijoz();
             lblJamiH.Text      = _servis.JamiHaydovchilar().ToString();
             lblBoshH.Text      = _servis.BoshHaydovchilarSoni().ToString();
@@ -407,6 +514,7 @@ namespace TaxiApp.Views
             panelHaydovchilar.IsVisible = t == panelHaydovchilar;
             panelMijozlar.IsVisible     = t == panelMijozlar;
             panelBuyurtmalar.IsVisible  = t == panelBuyurtmalar;
+            panelPulYechishlar.IsVisible = t == panelPulYechishlar;
             YangilaHamma();
         }
 
@@ -436,17 +544,26 @@ namespace TaxiApp.Views
 
         private static Button NavBtn(string matn, Action onClick) {
             var b = new Button {
-                Content = matn, HorizontalAlignment = HorizontalAlignment.Stretch,
+                Content = matn,
+                Height = 50,
+                Margin = new Thickness(0,0,0,6),
+                HorizontalAlignment = HorizontalAlignment.Stretch,
                 HorizontalContentAlignment = HorizontalAlignment.Left,
-                Padding = new Thickness(14,11), Background = Brushes.Transparent,
-                Foreground = Brush.Parse("#94A3B8"), FontSize = 14, CornerRadius = new CornerRadius(8)
+                VerticalContentAlignment = VerticalAlignment.Center,
+                Padding = new Thickness(20,0,20,0),
+                Background = Brush.Parse("#334155"),
+                Foreground = Brushes.White,
+                FontSize = 14,
+                FontWeight = FontWeight.Medium,
+                CornerRadius = new CornerRadius(10)
             };
-            b.Click += (_, _) => onClick(); return b;
+            b.Click += (_, _) => onClick();
+            return b;
         }
 
         private static Button Btn(string matn, string rang) => new Button {
             Content = matn, Background = Brush.Parse(rang), Foreground = Brushes.White,
-            Padding = new Thickness(14,8), FontWeight = FontWeight.SemiBold, CornerRadius = new CornerRadius(6)
+            Padding = new Thickness(14,8), FontWeight = FontWeight.Medium, CornerRadius = new CornerRadius(6)
         };
 
         private static TextBlock Sarlavha(string matn) => new TextBlock {
@@ -472,7 +589,7 @@ namespace TaxiApp.Views
             AutoGenerateColumns = false, IsReadOnly = true, Background = Brushes.White,
             GridLinesVisibility = DataGridGridLinesVisibility.Horizontal,
             BorderBrush = Brush.Parse("#E2E8F0"), BorderThickness = new Thickness(1),
-            RowHeight = 46, ColumnHeaderHeight = 48, FontSize = 14,
+            RowHeight = 46, ColumnHeaderHeight = 50, FontSize = 14,
             CanUserResizeColumns = true, CanUserSortColumns = true,
             SelectionMode = DataGridSelectionMode.Single,
             HorizontalAlignment = HorizontalAlignment.Stretch,
@@ -488,9 +605,10 @@ namespace TaxiApp.Views
     public class BuyurtmaView {
         public int    Id            { get; set; }
         public string MijozIsmi     { get; set; } = "";
-        public string HaydovchiIsmi { get; set; } = "";
+public string HaydovchiIsmi { get; set; } = "";
         public string Yonalish      { get; set; } = "";
         public string NarxMatn      { get; set; } = "";
         public string SanaMatn      { get; set; } = "";
+        public string Holat         { get; set; } = "";
     }
 }

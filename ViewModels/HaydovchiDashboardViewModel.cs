@@ -1,11 +1,10 @@
 using System;
-using System.Reactive;
 using ReactiveUI;
 using TaxiApp.Models;
 
 namespace TaxiApp.ViewModels
 {
-    public class HaydovchiDashboardViewModel : ViewModelBase
+    public class HaydovchiDashboardViewModel : ReactiveObject
     {
         private Haydovchi? _haydovchi;
         private HaydovchiDaromadi? _daromadi;
@@ -13,7 +12,7 @@ namespace TaxiApp.ViewModels
         private decimal _jamiDaromad;
         private decimal _hisobdagiPul;
         private double _reyting;
-        private int _yo lovchiSoni;
+        private int _yolovchiSoni;
 
         public Haydovchi? Haydovchi
         {
@@ -53,13 +52,12 @@ namespace TaxiApp.ViewModels
 
         public int YolovchiSoni
         {
-            get => _yo lovchiSoni;
-            set => this.RaiseAndSetIfChanged(ref _yo lovchiSoni, value);
+            get => _yolovchiSoni;
+            set => this.RaiseAndSetIfChanged(ref _yolovchiSoni, value);
         }
 
         public HaydovchiDashboardViewModel()
         {
-            // Default values
             BugunDaromad = 0;
             JamiDaromad = 0;
             HisobdagiPul = 0;

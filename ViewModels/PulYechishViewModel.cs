@@ -1,12 +1,11 @@
 using System;
 using System.Collections.ObjectModel;
-using System.Reactive;
 using ReactiveUI;
 using TaxiApp.Models;
 
 namespace TaxiApp.ViewModels
 {
-    public class PulYechishViewModel : ViewModelBase
+    public class PulYechishViewModel : ReactiveObject
     {
         private decimal _summa;
         private string _holati = "Kutilmoqda";

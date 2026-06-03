@@ -3,12 +3,10 @@
         x:Class="TaxiApp.Views.LoginWindow"
         Title="TaxiPro — Kirish"
         Width="500"
-        Height="650"
+        Height="750"
         WindowStartupLocation="CenterScreen"
         CanResize="False"
         Background="#0F172A">
-    
-
 
 <Grid>
 
@@ -50,12 +48,44 @@
                        HorizontalAlignment="Center"
                        IsVisible="False"/>
 
+            <!-- ROL TANLASH -->
+
+            <TextBlock Text="Ro'l tanlang"
+                       FontSize="14"
+                       FontWeight="SemiBold"
+                       Foreground="#CBD5E1"/>
+
+            <StackPanel Orientation="Horizontal" Spacing="10">
+                <Button Name="btnAdmin"
+                        Content="Admin"
+                        Width="160"
+                        Height="44"
+                        Background="#3B82F6"
+                        Foreground="White"
+                        CornerRadius="10"
+                        HorizontalAlignment="Stretch"
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"/>
+
+                <Button Name="btnDriver"
+                        Content="Haydovchi"
+                        Width="160"
+                        Height="44"
+                        Background="#64748B"
+                        Foreground="White"
+                        CornerRadius="10"
+                        HorizontalAlignment="Stretch"
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"/>
+            </StackPanel>
+
             <!-- LOGIN -->
 
             <TextBlock Text="Foydalanuvchi nomi"
                        FontSize="14"
                        FontWeight="SemiBold"
-                       Foreground="#CBD5E1"/>
+                       Foreground="#CBD5E1"
+                       Margin="0,8,0,0"/>
 
             <TextBox Name="txtLogin"
                      Watermark="Loginni kiriting"
@@ -81,7 +111,7 @@
             <!-- KIRISH TUGMASI -->
 
             <Button Name="btnKirish"
-                    Height="50"
+                    Height="44"
                     Background="#2563EB"
                     Foreground="White"
                     CornerRadius="10"
